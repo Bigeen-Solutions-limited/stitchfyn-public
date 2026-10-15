@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Use StitchFYN — Step-by-Step Guide</title>
+<meta name="description" content="A step-by-step guide to running your workshop on StitchFYN, with screenshots from the live app: setting up, taking an order, the three checks before cutting, production, quality check and collection.">
+<meta name="theme-color" content="#163d28">
+
+<meta property="og:title" content="How to Use StitchFYN — Step-by-Step Guide">
+<meta property="og:description" content="From fabric drop-off to collection, every step of StitchFYN with real screenshots.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="assets/guide/11-seal.webp">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="guide-page">
+
+<a class="skip-link" href="#guide-content">Skip to the guide</a>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/icon-192.png" alt="" width="30" height="30">StitchFYN</a>
+    <div class="nav-links">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#platform">The Platform</a>
+      <a href="guide.html" aria-current="page">How to Use</a>
+      <a href="index.html#verify">Verify a Seal</a>
+      <a href="index.html#faq">FAQ</a>
+    </div>
+    <div class="nav-actions">
+      <a href="#" class="nav-signin" data-app-link="/login">Sign in</a>
+      <a href="index.html#founding" class="btn btn-amber nav-cta">Apply Now</a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-overlay" id="navOverlay">
+    <a href="index.html#how" class="nav-overlay-link">How it works</a>
+    <a href="index.html#platform" class="nav-overlay-link">The Platform</a>
+    <a href="guide.html" class="nav-overlay-link">How to Use</a>
+    <a href="index.html#verify" class="nav-overlay-link">Verify a Seal</a>
+    <a href="index.html#faq" class="nav-overlay-link">FAQ</a>
+    <a href="#" class="nav-overlay-link" data-app-link="/login">Sign in</a>
+    <a href="index.html#founding" class="btn btn-amber nav-overlay-cta">Apply as a Founding Tailor</a>
+  </div>
+</nav>
+
+<!-- ============ GUIDE HERO ============ -->
+<header class="guide-hero" id="top">
+  <div class="hero-pattern" aria-hidden="true"></div>
+  <div class="container guide-hero-inner">
+    <p class="section-kicker kicker-light">How to use StitchFYN</p>
+    <h1 class="guide-hero-title">From fabric drop-off to collection, <span>step by step</span></h1>
+    <p class="guide-hero-sub">Every screenshot below comes from the working StitchFYN app, following one real order through the workshop: a cord lace gown for a wedding, from intake to collection.</p>
+    <ul class="guide-legend" aria-label="Who does each step">
+      <li><span class="role role-owner">Owner</span> sets up the workshop and runs orders</li>
+      <li><span class="role role-tailor">Tailor</span> works through production stages</li>
+      <li><span class="role role-customer">Customer</span> confirms from their own phone</li>
+    </ul>
+  </div>
+</header>
+
+<div class="container guide-layout">
+
+  <!-- ============ TABLE OF CONTENTS ============ -->
+  <aside class="guide-toc" aria-label="Guide contents">
+    <details class="guide-toc-box" id="guideToc" open>
+      <summary>Jump to a step</summary>
+      <nav>
+        <p class="toc-part">Get started</p>
+        <ol start="1">
+          <li><a href="#step-1">Activate your workspace</a></li>
+          <li><a href="#step-2">Sign in</a></li>
+          <li><a href="#step-3">Read your dashboard</a></li>
+        </ol>
+        <p class="toc-part">Set up your workshop</p>
+        <ol start="4">
+          <li><a href="#step-4">Build production blueprints</a></li>
+          <li><a href="#step-5">Stock your fabric vault</a></li>
+          <li><a href="#step-6">Invite your team</a></li>
+        </ol>
+        <p class="toc-part">Take an order</p>
+        <ol start="7">
+          <li><a href="#step-7">Add a client</a></li>
+          <li><a href="#step-8">Record measurements</a></li>
+          <li><a href="#step-9">Create the order</a></li>
+        </ol>
+        <p class="toc-part">Three checks before cutting</p>
+        <ol start="10">
+          <li><a href="#step-10">Record the deposit</a></li>
+          <li><a href="#step-11">Photograph and confirm the fabric</a></li>
+          <li><a href="#step-12">Agree the design brief</a></li>
+        </ol>
+        <p class="toc-part">Production</p>
+        <ol start="13">
+          <li><a href="#step-13">Assign a tailor and start</a></li>
+          <li><a href="#step-14">Work through the stages</a></li>
+          <li><a href="#step-15">Pass the quality check</a></li>
+        </ol>
+        <p class="toc-part">Hand over with proof</p>
+        <ol start="16">
+          <li><a href="#step-16">Final review and collection</a></li>
+          <li><a href="#step-17">Close the order and export evidence</a></li>
+          <li><a href="#step-18">What your customer sees</a></li>
+          <li><a href="#step-19">Check the audit log</a></li>
+        </ol>
+      </nav>
+    </details>
+  </aside>
+
+  <main class="guide-main" id="guide-content" tabindex="-1">
+
+    <!-- ===================== PART 1 ===================== -->
+    <section class="guide-part" aria-labelledby="part-1">
+      <h2 class="guide-part-title" id="part-1"><span>Part 1</span> Get started</h2>
+
+      <article class="guide-step" id="step-1" aria-labelledby="step-1-title">
+        <header class="guide-step-head">
+          <span class="journey-num" aria-hidden="true">1</span>
+          <div>
+            <h3 id="step-1-title">Activate your workspace</h3>
+            <p class="guide-roles"><span class="role role-owner">Owner</span></p>
+          </div>
+        </header>
+        <div class="guide-copy">
+          <p><strong>What you see:</strong> once your workshop is approved, StitchFYN sends the owner an email with an activation link. It opens the <em>Verify your email</em> page.</p>
+          <ol class="guide-do">
+            <li>Type a password in <em>Create a password</em>. The checklist turns green as it meets each rule: at least 8 characters, an uppercase letter, a lowercase letter and a number.</li>
+            <li>Type it again in <em>Confirm password</em>.</li>
+            <li>Click <em>Verify email &amp; activate account</em>.</li>
+          </ol>
+          <p class="guide-result"><strong>What happens next:</strong> you land on the sign-in page with the message "Email verified. Sign in with the password you just set." The link works once and expires after 24 hours.</p>
+        </div>
+        <figure class="guide-shot">
+          <button type="button" class="shot-zoom" data-full="assets/guide/01-activate.webp" aria-label="Enlarge screenshot: the Verify your email page">
+            <img src="assets/guide/01-activate.webp" width="1440" height="900" loading="lazy" alt="The Verify your email page with both password fields filled, the strength meter at Strong and all four password rules ticked.">
+          </button>
+          <figcaption>Set your own password; StitchFYN never sends you one for the owner account.</figcaption>
+        </figure>
+      </article>
+
+      <article class="guide-step" id="step-2" aria-labelledby="step-2-title">
+        <header class="guide-step-head">
+          <span class="journey-num" aria-hidden="true">2</span>
+          <div>
+            <h3 id="step-2-title">Sign in</h3>
+            <p class="guide-roles"><span class="role role-owner">Owner</span> <span class="role role-tailor">Staff</span></p>
+          </div>
+        </header>
+        <div class="guide-copy">
+          <p><strong>What you see:</strong> the <em>Welcome back</em> sign-in card.</p>
+          <ol class="guide-do">
+            <li>Enter your email address and password.</li>
+            <li>Click <em>Sign In</em>.</li>
+          </ol>
+          <p class="guide-result"><strong>What happens next:</strong> you go straight to your dashboard. If you forget your password, click <em>Forgot password?</em> and StitchFYN emails you a reset link.</p>
+        </div>
+        <figure class="guide-shot">
+          <button type="button" class="shot-zoom" data-full="assets/guide/02-sign-in.webp" aria-label="Enlarge screenshot: the sign-in page">
+            <img src="assets/guide/02-sign-in.webp" width="1440" height="900" loading="lazy" alt="The StitchFYN sign-in card with Email address and Password fields, a Forgot password link and a Sign In button.">
+          </button>
+          <figcaption>The same sign-in page is used by owners, managers, front desk and tailors.</figcaption>
+        </figure>
+      </article>
+
+      <article class="guide-step" id="step-3" aria-labelledby="step-3-title">
+        <header class="guide-step-head">
+          <span class="journey-num" aria-hidden="true">3</span>
+          <div>
+            <h3 id="step-3-title">Read your dashboard</h3>
+            <p class="guide-roles"><span class="role role-owner">Owner</span></p>
+          </div>
+        </header>
+        <div class="guide-copy">
+          <p><strong>What you see:</strong> <em>Workshop overview</em>, with tiles for active orders, orders at risk of missing their date, completed orders and average completion time. Below are your store's capacity, your StitchScore and the latest <em>Team activity</em>.</p>
+          <ol class="guide-do">
+            <li>Use the green sidebar to move between areas: Orders, Production, Customers, Inventory, Staff Management, Settings and the Forensic Center.</li>
+            <li>Click the bell for notifications, and your initial (top right) to change your password or log out.</li>
+          </ol>
+          <p class="guide-result"><strong>What happens next:</strong> the numbers update as your team works. StitchScore unlocks once you have completed 10 orders; until then it shows your progress towards it.</p>
+        </div>
+        <figure class="guide-shot">
+          <button type="button" class="shot-zoom" data-full="assets/guide/03-dashboard.webp" aria-label="Enlarge screenshot: the owner dashboard">
+            <img src="assets/guide/03-dashboard.webp" width="1440" height="900" loading="lazy" alt="The owner dashboard showing 2 active orders, 0 at risk, store capacity for Adire Atelier, StitchScore at 1 of 10 qualifying orders and a Team activity feed of stage completions by Tunde Bakare.">
+          </button>
+          <figcaption>Team activity shows who moved which order forward, and when.</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <!-- ===================== PART 2 ===================== -->
+    <section class="guide-part" aria-labelledby="part-2">
+      <h2 class="guide-part-title" id="part-2"><span>Part 2</span> Set up your workshop</h2>
+
+      <article class="guide-step" id="step-4" aria-labelledby="step-4-title">
+        <header class="guide-step-head">
+          <span class="journey-num" aria-hidden="true">4</span>
+          <div>
+            <h3 id="step-4-title">Build production blueprints</h3>
+            <p class="guide-roles"><span class="role role-owner">Owner</span></p>
+          </div>
+        </header>
+        <div class="guide-copy">
+          <p><strong>What you see:</strong> <em>Settings &rarr; Workshop Config &rarr; Production Blueprints</em>. A blueprint is the list of production stages for one kind of garment, plus the measurements it needs.</p>
+          <ol class="guide-do">
+            <li>Click <em>+ New</em>, give the blueprint a name (for example "Lace Gown") and a short description, then click <em>Create Blueprint</em>.</li>
+            <li>Select it. New blueprints start with a standard sequence: Intake, Cutting, Sewing, Embroidery, Finishing, Quality Check and Ready for Collection.</li>
+            <li>Under <em>Required measurements</em>, type each point you always take (Chest, Waist, Hips, Dress length&hellip;) and click <em>Add</em>.</li>
+            <li>To add an extra stage, click <em>Add Stage</em>, enter its name and estimated hours, and click <em>Add Stage</em>.</li>
+          </ol>
+          <p class="guide-result"><strong>What happens next:</strong> the blueprint appears as a garment type when you create orders, and its stages become the production checklist for every garment made from it.</p>
+          <p class="guide-tip"><strong>Tip:</strong> new stages are added to the end of the sequence, so plan the order before adding them. The Quality Check stage always needs a photo before it can be completed.</p>
+        </div>
+        <div class="guide-shots guide-shots-split">
+          <figure class="guide-shot">
+            <button type="button" class="shot-zoom" data-full="assets/guide/04-blueprints.webp" aria-label="Enlarge screenshot: production blueprints in Settings">
+              <img src="assets/guide/04-blueprints.webp" width="1440" height="1300" loading="lazy" alt="Settings Hub with Workshop Config open, listing the Ankara Gown, Lace Gown and General blueprints. Lace Gown is selected, showing required measurements Chest, Waist, Hips and Dress length and the stages Intake, Cutting, Sewing, Embroidery and Finishing.">
+            </button>
+            <figcaption>The Lace Gown blueprint with its required measurements and stage sequence.</figcaption>
+          </figure>
+          <figure class="guide-shot guide-shot-small">
+            <button type="button" class="shot-zoom" data-full="assets/guide/04-add-stage.webp" aria-label="Enlarge screenshot: the Add Stage dialog">
+              <img src="assets/guide/04-add-stage.webp" width="444" height="312" loading="lazy" alt="The Add Stage to Sequence dialog with Stage Name Sewing and Estimated Duration 12 hours.">
+            </button>
+            <figcaption>Adding a stage with its estimated hours.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="guide-step" id="step-5" aria-labelledby="step-5-title">
+        <header class="guide-step-head">
+          <span class="journey-num" aria-hidden="true">5</span>
+          <div>
+            <h3 id="step-5-title">Stock your fabric vault</h3>
+            <p class="guide-roles"><span class="role role-owner">Owner</span> <span class="role role-tailor">Manager</span></p>
+          </div>
+        </header>
+        <div class="guide-copy">
+          <p><strong>What you see:</strong> <em>Inventory</em> (the Material Vault). Orders can only use fabric that is registered here, so do this before taking your first order.</p>
+          <ol class="guide-do">
+            <li>Click <em>Register Material</em> and take or choose a photo of the fabric. The photo is required.</li>
+            <li>Enter the <em>Material Name</em>, an optional <em>SKU / Reference</em>, and the unit you count it in (Yards, Meters, Pieces or Boxes). Click <em>Register Material</em>.</li>
+            <li>On the new row, click <em>Receive Stock</em>, enter the quantity that arrived and confirm.</li>
+          </ol>
+          <p class="guide-result"><strong>What happens next:</strong> each material shows its Total, Reserved and Available stock. Fabric is reserved automatically when an order uses it.</p>
+        </div>
+        <div class="guide-shots guide-shots-split guide-shots-reverse">
+          <figure class="guide-shot">
+            <button type="button" class="shot-zoom" data-full="assets/guide/05-inventory.webp" aria-label="Enlarge screenshot: the Material Vault">
+              <img src="assets/guide/05-inventory.webp" width="1440" height="900" loading="lazy" alt="The Material Vault listing Ankara Wax Print with 24 yards and Cord Lace (Cream) with 15 yards, each with a fabric photo, Receive Stock and Update Photo buttons.">
+            </button>
+            <figcaption>Two registered fabrics with photos and stock levels.</figcaption>
+          </figure>
+          <figure class="guide-shot guide-shot-small">
+            <button type="button" class="shot-zoom" data-full="assets/guide/05-register-material.webp" aria-label="Enlarge screenshot: the Register New Material dialog">
+              <img src="assets/guide/05-register-material.webp" width="444" height="678" loading="lazy" alt="The Register New Material dialog with a photo of orange and blue wax print fabric, the name Ankara Wax Print, SKU ANK-WAX-001 and unit Yards.">
+            </button>
+            <figcaption>Registering a fabric with its photo.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="guide-step" id="step-6" aria-labelledby="step-6-title">
+        <header class="guide-step-head">
+          <span class="journey-num" aria-hidden="true">6</span>
+          <div>
+            <h3 id="step-6-title">Invite your team</h3>
+            <p class="guide-roles"><span class="role role-owner">Owner</span></p>
+          </div>
+        </header>
+        <div class="guide-copy">
+          <p><strong>What you see:</strong> <em>Staff Management</em> (Identity &amp; Access), listing everyone with access to your workshop.</p>
+          <ol class="guide-do">
+            <li>Click <em>Invite Staff</em>.</li>
+            <li>Enter their full name and email, choose a <em>System Role</em> (Manager, Tailor or Front Desk) and the store they work in.</li>
+            <li>Click <em>Grant Access</em>.</li>
+          </ol>
+          <p class="guide-result"><strong>What happens next:</strong> they receive an email with a temporary password. The first time they sign in, StitchFYN asks them to create their own password. From this page you can later change someone's role, suspend them or remove them; every change is recorded in the access log.</p>
+          <p class="guide-tip"><strong>Who sees what:</strong> tailors see their Dashboard and the Production board only. Front desk staff can take orders and manage clients.</p>
+        </div>
+        <div class="guide-shots guide-shots-split guide-shots-reverse">
+          <figure class="guide-shot">
+            <button type="button" class="shot-zoom" data-full="assets/guide/06-staff-list.webp" aria-label="Enlarge screenshot: the staff list">
+              <img src="assets/guide/06-staff-list.webp" width="1440" height="900" loading="lazy" alt="Staff Management listing the owner Funmi Adeyemi and the tailor Tunde Bakare, with a role selector, Suspend and Remove buttons.">
+            </button>
+            <figcaption>Your team, their roles and last sign-in.</figcaption>
+          </figure>
+          <figure class="guide-shot guide-shot-small">
+            <button type="button" class="shot-zoom" data-full="assets/guide/06-invite-staff.webp" aria-label="Enlarge screenshot: the invite dialog">
+              <img src="assets/guide/06-invite-staff.webp" width="444" height="440" loading="lazy" alt="The Issue Credentials dialog with Full Name Tunde Bakare, an email address, System Role Tailor and Store Assignment Adire Atelier.">
+            </button>
+            <figcaption>Inviting a tailor.</figcaption>
+          </figure>
+        </div>
+        <figure class="guide-shot">
+          <button type="button" class="shot-zoom" data-full="assets/guide/06-first-sign-in.webp" aria-label="Enlarge screenshot: the first sign-in password screen">
+            <img src="assets/guide/06-first-sign-in.webp" width="1440" height="900" loading="lazy" alt="The Create your password screen a new tailor sees on first sign-in, with fields for the temporary password, a new password and confirmation.">
+          </button>
+          <figcaption>What a new staff member sees the first time they sign in.</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <!-- ===================== PART 3 ===================== -->
+    <section class="guide-part" aria-labelledby="part-3">
+      <h2 class="guide-part-title" id="part-3"><span>Part 3</span> Take an order</h2>
+
+      <article class="guide-step" id="step-7" aria-labelledby="step-7-title">
+        <header class="guide-step-head">
+          <span class="journey-num" aria-hidden="true">7</span>
+          <div>
+            <h3 id="step-7-title">Add a client</h3>
+            <p class="guide-roles"><span class="role role-owner">Owner</span> <span class="role role-tailor">Front desk</span></p>
+          </div>
+        </header>
+        <div class="guide-copy">
+          <p><strong>What you see:</strong> <em>Customers</em>, your client list with a search box.</p>
+          <ol class="guide-do">
+            <li>Click <em>+ New Client</em>.</li>
+            <li>Enter the client's full name (required), phone number and email address.</li>
+            <li>Click <em>Create Profile</em>.</li>
+          </ol>
+          <p class="guide-result"><strong>What happens next:</strong> the client's profile opens, ready for measurements. If you added an email address, StitchFYN emails the client a welcome message.</p>
+        </div>
+        <figure class="guide-shot">
+          <button type="button" class="shot-zoom" data-full="assets/guide/07-new-client.webp" aria-label="Enlarge screenshot: the Add New Client dialog">
+            <img src="assets/guide/07-new-client.webp" width="1440" height="900" loading="lazy" alt="The Add New Client dialog over the Clients page, filled in with Chiamaka Okafor, a phone number and an email address, with a Create Profile button.">
+          </button>
+          <figcaption>Only the name is required; phone and email can be added later.</figcaption>
+        </figure>
+      </article>
+
+      <article class="guide-step" id="step-8" aria-labelledby="step-8-title">
+        <header class="guide-step-head">
+          <span class="journey-num" aria-hidden="true">8</span>
+          <div>
+            <h3 id="step-8-title">Record measurements</h3>
+            <p class="guide-roles"><span class="role role-owner">Owner</span> <span class="role role-tailor">Front desk</span></p>
+          </div>
+        </header>
+        <div class="guide-copy">
+          <p><strong>What you see:</strong> the client profile, with contact details, <em>Master Measurements</em>, order history and the measurement version history.</p>
+          <ol class="guide-do">
+            <li>Click <em>Record New Measurement</em>.</li>
+            <li>Under <em>Add custom precision point</em>, type a point (for example "Chest") and press Enter or click <em>Add Label</em>. Repeat for each point.</li>
+            <li>Enter each value in centimetres and click <em>Commit Version</em>.</li>
+          </ol>
+          <p class="guide-result"><strong>What happens next:</strong> the measurements appear on the profile as a numbered version. Every later change creates a new version, so earlier measurements are never overwritten. <em>Lock &amp; Seal Version</em> freezes a version once the client has agreed it.</p>
+        </div>
+        <div class="guide-shots guide-shots-split guide-shots-reverse">
+          <figure class="guide-shot">
+            <button type="button" class="shot-zoom" data-full="assets/guide/08-client-profile.webp" aria-label="Enlarge screenshot: the client profile">
+              <img src="assets/guide/08-client-profile.webp" width="1440" height="900" loading="lazy" alt="Chiamaka Okafor's client profile showing Version 1 active and six master measurements: Hips 104, Chest 96, Waist 78, Shoulder 40, Dress length 120 and Sleeve length 58 centimetres.">
+            </button>
+            <figcaption>Saved measurements on the client profile.</figcaption>
+          </figure>
+          <figure class="guide-shot guide-shot-small">
+            <button type="button" class="shot-zoom" data-full="assets/guide/08-measurements.webp" aria-label="Enlarge screenshot: the measurement dialog">
+              <img src="assets/guide/08-measurements.webp" width="900" height="474" loading="lazy" alt="The Initialize Measurements dialog with six labelled measurement fields in centimetres and a Commit Version button.">
+            </button>
+            <figcaption>Each point is entered in centimetres.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="guide-step" id="step-9" aria-labelledby="step-9-title">
+        <header class="guide-step-head">
+          <span class="journey-num" aria-hidden="true">9</span>
+          <div>
+            <h3 id="step-9-title">Create the order</h3>
+            <p class="guide-roles"><span class="role role-owner">Owner</span> <span class="role role-tailor">Front desk</span></p>
+          </div>
+        </header>
+        <div class="guide-copy">
+          <p><strong>What you see:</strong> <em>Production Intake</em>, a guided form with numbered steps. Start it from <em>New Order</em> in the sidebar, or from <em>Create New Order</em> on a client's profile (which skips the client step).</p>
+          <ol class="guide-do">
+            <li><strong>Client:</strong> search for an existing client and pick them, or click <em>Add New Client Profile</em>.</li>
+            <li><strong>Blueprint and deadline:</strong> click a garment type (each click adds an item), optionally assign a tailor to it, pick the production deadline on the calendar, and choose the store. Under <em>Order classification</em> choose the occasion, garment category, payment structure and construction tier, then click <em>Configure Material</em>.</li>
+            <li><strong>Material:</strong> choose the fabric from your vault (it shows how much is left), enter the quantity, pick a colour swatch and add design notes. The fabric photo is taken after the order is saved.</li>
+            <li><strong>Measurements:</strong> if the client's saved measurements already cover what the blueprint needs, StitchFYN uses them and shows <em>Proceed to Review</em>. Otherwise you fill in the missing points.</li>
+            <li><strong>Review:</strong> check the summary and click <em>Commit to Production</em>.</li>
+          </ol>
+          <p class="guide-result"><strong>What happens next:</strong> the order is saved, the fabric is reserved in your vault, and you can open the new order page.</p>
+        </div>
+        <div class="guide-shots guide-shots-grid">
+          <figure class="guide-shot">
+            <button type="button" class="shot-zoom" data-full="assets/guide/09-order-client.webp" aria-label="Enlarge screenshot: choosing the client">
+              <img src="assets/guide/09-order-client.webp" width="1440" height="1200" loading="lazy" alt="Step 1 of Production Intake: the client search box with Chiamaka Okafor suggested, and an Add New Client Profile button.">
+            </button>
+            <figcaption>1 &middot; Find the client.</figcaption>
+          </figure>
+          <figure class="guide-shot">
+            <button type="button" class="shot-zoom" data-full="assets/guide/09-order-blueprint.webp" aria-label="Enlarge screenshot: blueprint and deadline">
+              <img src="assets/guide/09-order-blueprint.webp" width="1440" height="1200" loading="lazy" alt="Step 2: garment types Ankara Gown, Lace Gown and General, with Lace Gown added to the order items, 20 November 2026 selected as the deadline, store Adire Atelier, occasion Wedding and garment category Lace Gown.">
+            </button>
+            <figcaption>2 &middot; Pick the blueprint, deadline and order details.</figcaption>
+          </figure>
+          <figure class="guide-shot">
+            <button type="button" class="shot-zoom" data-full="assets/guide/09-order-fabric.webp" aria-label="Enlarge screenshot: material details">
+              <img src="assets/guide/09-order-fabric.webp" width="1440" height="1200" loading="lazy" alt="Step 3: Material Config with Cord Lace (Cream) selected showing 15 yards left, quantity 5 yards, colour swatches, design notes, and a note that complete measurements from the client profile will be used.">
+            </button>
+            <figcaption>3 &middot; Choose the fabric from your vault.</figcaption>
+          </figure>
+          <figure class="guide-shot">
+            <button type="button" class="shot-zoom" data-full="assets/guide/09-order-review.webp" aria-label="Enlarge screenshot: order review">
+              <img src="assets/guide/09-order-review.webp" width="1440" height="1200" loading="lazy" alt="The final Formalize Order step summarising the client, the 20 November deadline, Cord Lace fabric with design notes and the Lace Gown line item, with a Commit to Production button.">
+            </button>
+            <figcaption>4 &middot; Review and commit.</figcaption>
+          </figure>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===================== PART 4 ===================== -->
+    <section class="guide-part" aria-labelledby="part-4">
+      <h2 class="guide-part-title" id="part-4"><span>Part 4</span> Three checks before cutting</h2>
+      <p class="guide-part-intro">Production cannot start until three things are on record: the deposit, the fabric and the design brief. On the order page, under <em>Status transitions</em>, StitchFYN shows which are still outstanding: <em>Deposit required</em>, <em>Fabric unconfirmed</em> and <em>Design pending</em>.</p>
+
+      <article class="guide-step" id="step-10" aria-labelledby="step-10-title">
+        <header class="guide-step-head">
+          <span class="journey-num" aria-hidden="true">10</span>
+          <div>
+            <h3 id="step-10-title">Record the deposit</h3>
+            <p class="guide-roles"><span class="role role-owner">Owner</span> <span class="role role-tailor">Manager</span></p>
+          </div>
+        </header>
+        <div class="guide-split">
+          <div class="guide-copy">
+            <p><strong>What you see:</strong> the <em>Payment Ledger</em> card on the order page.</p>
+            <ol class="guide-do">
+              <li>Click <em>Add Payment</em>.</li>
+              <li>Enter the amount in naira, then choose the <em>Payment Method</em> (Cash, Bank Transfer, Card, POS or Other) and the <em>Payment Intent</em> (Deposit, Instalment, Final Payment or Full Upfront).</li>
+              <li>Add a note such as the transfer reference, and click <em>Record Payment</em>.</li>
+            </ol>
+            <p class="guide-result"><strong>What happens next:</strong> the payment appears in the ledger history, the total paid updates, and the <em>Deposit required</em> flag clears.</p>
+          </div>
+          <figure class="guide-shot guide-shot-small">
+            <button type="button" class="shot-zoom" data-full="assets/guide/10-payment.webp" aria-label="Enlarge screenshot: recording a payment">
+              <img src="assets/guide/10-payment.webp" width="342" height="555" loading="lazy" alt="The Record New Payment form: amount 75000 naira, method Bank Transfer, intent Deposit, note Deposit transfer ref 0291 and a Record Payment button.">
+            </button>
+            <figcaption>Recording a ₦75,000 deposit.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="guide-step" id="step-11" aria-labelledby="step-11-title">
+        <header class="guide-step-head">
+          <span class="journey-num" aria-hidden="true">11</span>
+          <div>
+            <h3 id="step-11-title">Photograph and confirm the fabric</h3>
+            <p class="guide-roles"><span class="role role-owner">Owner</span> <span class="role role-customer">Customer</span></p>
+          </div>
+        </header>
+        <div class="guide-copy">
+          <p><strong>What you see:</strong> on the order page's garment card, <em>Fabric evidence photos</em> and <em>Fabric safety seal</em>.</p>
+          <ol class="guide-do">
+            <li>Click <em>Capture Fabric Photo</em>. On a phone this opens the camera; photograph the fabric the customer brought.</li>
+            <li>If the customer is with you, click <em>Confirm Fabric</em>, check the recorded quantity with them, and click <em>Confirm Fabric</em> again. Otherwise the customer confirms from their own order page.</li>
+          </ol>
+          <p class="guide-result"><strong>What happens next:</strong> StitchFYN issues a <strong>Fabric Safety Seal</strong>: a QR code and a verification code (for example FSS-2N7Q-QHZZ) that anyone can check. Use <em>Share via SMS</em> to send it to the customer. Confirmation cannot be undone; the fabric record is locked from then on.</p>
+        </div>
+        <div class="guide-shots guide-shots-split guide-shots-reverse">
+          <figure class="guide-shot">
+            <button type="button" class="shot-zoom" data-full="assets/guide/11-seal.webp" aria-label="Enlarge screenshot: the Fabric Safety Seal">
+              <img src="assets/guide/11-seal.webp" width="1440" height="900" loading="lazy" alt="The order page after confirmation: the fabric evidence photo, the Fabric Safety Seal with a QR code, verification code FSS-2N7Q-QHZZ generated 15 Oct 2026 and a Share via SMS button, above the material audit trail.">
+            </button>
+            <figcaption>The seal appears as soon as the fabric is confirmed.</figcaption>
+          </figure>
+          <figure class="guide-shot guide-shot-small">
+            <button type="button" class="shot-zoom" data-full="assets/guide/11-confirm-fabric.webp" aria-label="Enlarge screenshot: the Confirm Fabric dialog">
+              <img src="assets/guide/11-confirm-fabric.webp" width="600" height="278" loading="lazy" alt="The Confirm Fabric dialog showing a recorded fabric quantity of 5 yards and the warning that this cannot be undone.">
+            </button>
+            <figcaption>Confirming with the customer in front of you.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="guide-step" id="step-12" aria-labelledby="step-12-title">
+        <header class="guide-step-head">
+          <span class="journey-num" aria-hidden="true">12</span>
+          <div>
+            <h3 id="step-12-title">Agree the design brief</h3>
+            <p class="guide-roles"><span class="role role-owner">Owner</span> <span class="role role-customer">Customer</span></p>
+          </div>
+        </header>
+        <div class="guide-split guide-split-phone">
+          <div class="guide-copy">
+            <p><strong>What you see:</strong> the <em>Design brief</em> section of the order page.</p>
+            <ol class="guide-do">
+              <li>Click <em>Create Design Brief</em> and describe the silhouette, neckline, waist detail and back finish, with any additional notes.</li>
+              <li>Click <em>Create Brief</em>. The brief shows <em>Awaiting customer confirmation</em>.</li>
+              <li>The customer opens their private StitchFYN order page on their phone, reads the brief and taps <em>Confirm Design Brief</em>.</li>
+            </ol>
+            <p class="guide-result"><strong>What happens next:</strong> once the deposit, fabric and brief are all confirmed, the order is ready for production. No more "that's not what I asked for".</p>
+            <figure class="guide-shot guide-shot-small">
+              <button type="button" class="shot-zoom" data-full="assets/guide/12-design-brief.webp" aria-label="Enlarge screenshot: the Design Brief dialog">
+                <img src="assets/guide/12-design-brief.webp" width="600" height="382" loading="lazy" alt="The Design Brief dialog: silhouette mermaid fitted to the knee, sweetheart hand-beaded neckline, princess seams, concealed lace-trimmed zip and notes about a matching gele.">
+              </button>
+              <figcaption>Writing the brief on the order page.</figcaption>
+            </figure>
+          </div>
+          <figure class="guide-shot guide-shot-phone">
+            <button type="button" class="shot-zoom" data-full="assets/guide/12-portal-brief.webp" aria-label="Enlarge screenshot: the customer confirming the brief on a phone">
+              <img src="assets/guide/12-portal-brief.webp" width="780" height="1688" loading="lazy" alt="The customer's order page on a phone: a confirmation that they confirmed the fabric, then the design brief to review with a Confirm Design Brief button.">
+            </button>
+            <figcaption>What the customer sees on their phone.</figcaption>
+          </figure>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===================== PART 5 ===================== -->
+    <section class="guide-part" aria-labelledby="part-5">
+      <h2 class="guide-part-title" id="part-5"><span>Part 5</span> Production</h2>
+
+      <article class="guide-step" id="step-13" aria-labelledby="step-13-title">
+        <header class="guide-step-head">
+          <span class="journey-num" aria-hidden="true">13</span>
+          <div>
+            <h3 id="step-13-title">Assign a tailor and start production</h3>
+            <p class="guide-roles"><span class="role role-owner">Owner</span> <span class="role role-tailor">Manager</span></p>
+          </div>
+        </header>
+        <div class="guide-copy">
+          <p><strong>What you see:</strong> on the order page, <em>Garment inventory</em>, <em>Production assignment</em> and <em>Status transitions</em>. With all three checks done, no warning flags remain.</p>
+          <ol class="guide-do">
+            <li>Under <em>Production assignment</em>, choose the tailor in <em>Assign Tailor</em>. (<em>Reassign</em> moves the garment to someone else later.)</li>
+            <li>Click <em>&rarr; IN PRODUCTION</em>.</li>
+          </ol>
+          <p class="guide-result"><strong>What happens next:</strong> the garment moves to <em>In production</em> and appears on the Production board for the assigned tailor.</p>
+        </div>
+        <figure class="guide-shot">
+          <button type="button" class="shot-zoom" data-full="assets/guide/13-start-production.webp" aria-label="Enlarge screenshot: assigning a tailor and starting production">
+            <img src="assets/guide/13-start-production.webp" width="1440" height="900" loading="lazy" alt="The order page with Tunde Bakare chosen in Assign Tailor, the garment card showing Tailor: Tunde Bakare, and status transition buttons IN PRODUCTION and CANCELLED, next to the material audit trail.">
+          </button>
+          <figcaption>With the checks cleared, the order can move into production.</figcaption>
+        </figure>
+      </article>
+
+      <article class="guide-step" id="step-14" aria-labelledby="step-14-title">
+        <header class="guide-step-head">
+          <span class="journey-num" aria-hidden="true">14</span>
+          <div>
+            <h3 id="step-14-title">Work through the stages</h3>
+            <p class="guide-roles"><span class="role role-tailor">Tailor</span> <span class="role role-owner">Owner</span></p>
+          </div>
+        </header>
+        <div class="guide-copy">
+          <p><strong>What you see:</strong> <em>Production</em>, the production floor. Each row is a garment with its client, current stage, deadline and tailor. Use the stage chips and filters to narrow the list.</p>
+          <ol class="guide-do">
+            <li>Click the <em>Work on stage</em> icon (the gold factory) on the garment's row. On a phone, tap <em>Work on stage</em> on its card.</li>
+            <li>In <em>Production stages</em>, the active stage is outlined in green. Add an optional note and tap <em>Add Progress Photo</em> to photograph the work (up to 3 photos per stage).</li>
+            <li>When the stage is done, click <em>Mark Complete</em>. The next stage becomes active.</li>
+          </ol>
+          <p class="guide-result"><strong>What happens next:</strong> the customer's tracking page moves forward with every completed stage, and each completion is recorded in the order's audit trail.</p>
+          <p class="guide-tip"><strong>Working offline:</strong> if the workshop loses signal, stage updates are saved on the device and sent automatically when you're back online. Fabric photos taken offline are queued the same way.</p>
+        </div>
+        <div class="guide-shots guide-shots-split">
+          <figure class="guide-shot">
+            <button type="button" class="shot-zoom" data-full="assets/guide/14-production-board.webp" aria-label="Enlarge screenshot: the tailor's Production board">
+              <img src="assets/guide/14-production-board.webp" width="1440" height="900" loading="lazy" alt="A tailor's Production floor: a sidebar with only Dashboard and Production, totals for in production, due today, fittings and blocked, and order #20 for Chiamaka Okafor at the Cutting stage assigned to Tunde Bakare.">
+            </button>
+            <figcaption>A tailor's view: only the Dashboard and the Production board.</figcaption>
+          </figure>
+          <figure class="guide-shot">
+            <button type="button" class="shot-zoom" data-full="assets/guide/14-stage-work.webp" aria-label="Enlarge screenshot: the Production stages dialog">
+              <img src="assets/guide/14-stage-work.webp" width="900" height="542" loading="lazy" alt="The Production stages dialog with the Cutting stage active, a progress photo thumbnail, a note field, an Add Progress Photo button and a Mark Complete button.">
+            </button>
+            <figcaption>Adding a progress photo, then marking the stage complete.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="guide-step" id="step-15" aria-labelledby="step-15-title">
+        <header class="guide-step-head">
+          <span class="journey-num" aria-hidden="true">15</span>
+          <div>
+            <h3 id="step-15-title">Pass the quality check</h3>
+            <p class="guide-roles"><span class="role role-tailor">Tailor</span></p>
+          </div>
+        </header>
+        <div class="guide-copy">
+          <p><strong>What you see:</strong> when the garment reaches the Quality Check stage, <em>Mark Complete</em> is greyed out with the note "Add at least one progress photo before completing this stage."</p>
+          <ol class="guide-do">
+            <li>Inspect the garment, then tap <em>Add Progress Photo</em> and photograph the finished piece.</li>
+            <li>Click <em>Mark Complete</em>, then complete the last stage, <em>Ready for Collection</em>.</li>
+          </ol>
+          <p class="guide-result"><strong>What happens next:</strong> the photo becomes part of the order's evidence, and the order is ready for the final review.</p>
+        </div>
+        <div class="guide-shots guide-shots-split">
+          <figure class="guide-shot">
+            <button type="button" class="shot-zoom" data-full="assets/guide/15-qc-locked.webp" aria-label="Enlarge screenshot: quality check waiting for a photo">
+              <img src="assets/guide/15-qc-locked.webp" width="900" height="688" loading="lazy" alt="Cutting, Sewing, Embroidery and Finishing marked Ready, and the active QC stage with Mark Complete disabled and the message to add at least one progress photo.">
+            </button>
+            <figcaption>Before: Mark Complete waits for a photo.</figcaption>
+          </figure>
+          <figure class="guide-shot">
+            <button type="button" class="shot-zoom" data-full="assets/guide/15-qc-photo.webp" aria-label="Enlarge screenshot: quality check with a photo">
+              <img src="assets/guide/15-qc-photo.webp" width="900" height="688" loading="lazy" alt="The same QC stage with a photo thumbnail added and Mark Complete now available.">
+            </button>
+            <figcaption>After: the photo is added and the stage can be completed.</figcaption>
+          </figure>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===================== PART 6 ===================== -->
+    <section class="guide-part" aria-labelledby="part-6">
+      <h2 class="guide-part-title" id="part-6"><span>Part 6</span> Hand over with proof</h2>
+
+      <article class="guide-step" id="step-16" aria-labelledby="step-16-title">
+        <header class="guide-step-head">
+          <span class="journey-num" aria-hidden="true">16</span>
+          <div>
+            <h3 id="step-16-title">Final quality review and collection</h3>
+            <p class="guide-roles"><span class="role role-owner">Owner</span> <span class="role role-customer">Customer</span></p>
+          </div>
+        </header>
+        <div class="guide-split guide-split-phone">
+          <div class="guide-copy">
+            <p><strong>What you see:</strong> at the bottom of the order page, <em>Final Quality Review</em>.</p>
+            <ol class="guide-do">
+              <li>Click <em>Begin Collection</em>. The review checklist appears: the garment matches the agreed brief, all fabric is accounted for, stitching and finishing are inspected, and the customer is satisfied.</li>
+              <li>Go through the points with the garment in hand, then click <em>Complete Quality Check</em>.</li>
+              <li>When the customer collects, they tap <em>Confirm Collection</em> on their order page.</li>
+            </ol>
+            <p class="guide-result"><strong>What happens next:</strong> the order shows "You completed the final quality review", then the customer's confirmation, with dates on both.</p>
+            <figure class="guide-shot">
+              <button type="button" class="shot-zoom" data-full="assets/guide/16-final-review.webp" aria-label="Enlarge screenshot: the final quality review">
+                <img src="assets/guide/16-final-review.webp" width="1440" height="900" loading="lazy" alt="The Final Quality Review section listing four checklist points, the message You completed the final quality review on 15 Oct 2026, and Awaiting customer confirmation.">
+              </button>
+              <figcaption>The review is recorded and waits for the customer.</figcaption>
+            </figure>
+          </div>
+          <figure class="guide-shot guide-shot-phone">
+            <button type="button" class="shot-zoom" data-full="assets/guide/16-portal-collection.webp" aria-label="Enlarge screenshot: the customer confirming collection">
+              <img src="assets/guide/16-portal-collection.webp" width="780" height="1688" loading="lazy" alt="The customer's order page on a phone showing they confirmed the design brief and confirmed collection on 15 October 2026, with the payment summary of 75,000 naira and a messages box.">
+            </button>
+            <figcaption>The customer's collection confirmation.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="guide-step" id="step-17" aria-labelledby="step-17-title">
+        <header class="guide-step-head">
+          <span class="journey-num" aria-hidden="true">17</span>
+          <div>
+            <h3 id="step-17-title">Close the order and export evidence</h3>
+            <p class="guide-roles"><span class="role role-owner">Owner</span></p>
+          </div>
+        </header>
+        <div class="guide-copy">
+          <p><strong>What you see:</strong> the order header, with <em>Export Evidence</em>, <em>Forensic Proof</em> and <em>Edit Order</em>.</p>
+          <ol class="guide-do">
+            <li>Under <em>Status transitions</em>, click <em>&rarr; COMPLETED</em>. The garment status changes to Completed.</li>
+            <li>Click <em>Export Evidence</em> to download the order's evidence as a PDF, ready to share if there is ever a dispute.</li>
+            <li>Click <em>Forensic Proof</em> to see the order's full audit trail: every action, who did it, when, and its signature.</li>
+          </ol>
+          <p class="guide-result"><strong>What happens next:</strong> the order counts towards your StitchScore, and its records stay locked and verifiable.</p>
+        </div>
+        <div class="guide-shots guide-shots-split">
+          <figure class="guide-shot">
+            <button type="button" class="shot-zoom" data-full="assets/guide/17-order-completed.webp" aria-label="Enlarge screenshot: the completed order">
+              <img src="assets/guide/17-order-completed.webp" width="1440" height="900" loading="lazy" alt="The completed order: garment status COMPLETED, Export Evidence and Forensic Proof buttons, the payment ledger with the 75,000 naira deposit and the Fabric Safety Seal.">
+            </button>
+            <figcaption>A completed order, ready to export.</figcaption>
+          </figure>
+          <figure class="guide-shot">
+            <button type="button" class="shot-zoom" data-full="assets/guide/17-forensic-proof.webp" aria-label="Enlarge screenshot: Forensic Proof">
+              <img src="assets/guide/17-forensic-proof.webp" width="900" height="836" loading="lazy" alt="The Forensic Proof dialog listing Fabric Intake Recorded, Order Created, Payment Recorded and Fabric Evidence Recorded entries, each with its actor, details, witnessed date and signature.">
+            </button>
+            <figcaption>Forensic Proof: the order's immutable audit trail.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="guide-step" id="step-18" aria-labelledby="step-18-title">
+        <header class="guide-step-head">
+          <span class="journey-num" aria-hidden="true">18</span>
+          <div>
+            <h3 id="step-18-title">What your customer sees</h3>
+            <p class="guide-roles"><span class="role role-customer">Customer</span></p>
+          </div>
+        </header>
+        <div class="guide-copy">
+          <p>Customers don't need an app or an account. Everything works in the phone's browser.</p>
+          <ul class="guide-list">
+            <li><strong>Tracking page:</strong> a greeting, the current stage, the delivery date and every stage of production, updated as your team works.</li>
+            <li><strong>Order page:</strong> the order status, production timeline, fabric and design confirmations, payments made, a message thread with your workshop, and <em>Report a problem with this order</em>.</li>
+            <li><strong>Seal check:</strong> anyone can confirm a Fabric Safety Seal by scanning its QR code or entering its code under <a href="index.html#verify">Verify a Seal</a>. It shows the tailor, business, date logged and quantity.</li>
+          </ul>
+        </div>
+        <div class="guide-shots guide-shots-phones">
+          <figure class="guide-shot guide-shot-phone">
+            <button type="button" class="shot-zoom" data-full="assets/guide/18-tracking.webp" aria-label="Enlarge screenshot: the tracking page">
+              <img src="assets/guide/18-tracking.webp" width="780" height="1688" loading="lazy" alt="The customer tracking page on a phone greeting Chiamaka Okafor, with a status badge, the delivery date and the list of production stages.">
+            </button>
+            <figcaption>Tracking page.</figcaption>
+          </figure>
+          <figure class="guide-shot guide-shot-phone">
+            <button type="button" class="shot-zoom" data-full="assets/guide/18-portal.webp" aria-label="Enlarge screenshot: the customer order page">
+              <img src="assets/guide/18-portal.webp" width="780" height="1688" loading="lazy" alt="The customer's order page for order 21 showing its status, estimated handover and target date, and the production timeline with each stage numbered.">
+            </button>
+            <figcaption>Order page.</figcaption>
+          </figure>
+          <figure class="guide-shot guide-shot-phone">
+            <button type="button" class="shot-zoom" data-full="assets/guide/18-seal-public.webp" aria-label="Enlarge screenshot: the public seal check">
+              <img src="assets/guide/18-seal-public.webp" width="780" height="1688" loading="lazy" alt="The public Fabric Protected page for seal FSS-2N7Q-QHZZ with its QR code, tailor Tunde Bakare, business Adire Atelier, date logged 15 Oct 2026 and quantity 5 yards.">
+            </button>
+            <figcaption>Seal check.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="guide-step" id="step-19" aria-labelledby="step-19-title">
+        <header class="guide-step-head">
+          <span class="journey-num" aria-hidden="true">19</span>
+          <div>
+            <h3 id="step-19-title">Check the audit log</h3>
+            <p class="guide-roles"><span class="role role-owner">Owner</span></p>
+          </div>
+        </header>
+        <div class="guide-copy">
+          <p><strong>What you see:</strong> <em>Forensic Center &rarr; Audit Log</em>, the <em>System Audit Log</em> for your whole workshop.</p>
+          <ol class="guide-do">
+            <li>Scroll the immutable audit trail: company setup, fabric intake, payments, stage completions, photos and confirmations.</li>
+            <li>Each entry shows who acted, the details, when it was witnessed and its signature.</li>
+          </ol>
+          <p class="guide-result"><strong>What happens next:</strong> nothing can be edited or deleted here. If a customer ever disputes what happened, this record and the evidence PDF are your proof.</p>
+        </div>
+        <figure class="guide-shot">
+          <button type="button" class="shot-zoom" data-full="assets/guide/19-audit-log.webp" aria-label="Enlarge screenshot: the System Audit Log">
+            <img src="assets/guide/19-audit-log.webp" width="1440" height="900" loading="lazy" alt="The System Audit Log listing Company Created, Fabric Intake Recorded and Payment Recorded entries with their details, witnessed dates and signatures.">
+          </button>
+          <figcaption>Every critical action, witnessed and signed.</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section class="guide-end" aria-labelledby="guide-end-title">
+      <h2 id="guide-end-title">Ready to run your workshop on StitchFYN?</h2>
+      <p>We are onboarding Founding Tailors now. Apply, and we will set up your workspace and walk you through these steps.</p>
+      <div class="guide-end-actions">
+        <a href="index.html#founding" class="btn btn-amber btn-large">Apply as a Founding Tailor</a>
+        <a href="#" class="btn btn-ghost-dark btn-large" data-app-link="/login">Sign in to StitchFYN</a>
+      </div>
+      <p class="guide-end-top"><a href="#top">Back to top</a></p>
+    </section>
+
+  </main>
+</div>
+
+<!-- Screenshot lightbox -->
+<dialog class="shot-lightbox" id="shotLightbox" aria-label="Enlarged screenshot">
+  <button type="button" class="shot-lightbox-close" id="shotLightboxClose" aria-label="Close enlarged screenshot">&times;</button>
+  <img id="shotLightboxImg" alt="">
+  <p class="shot-lightbox-caption" id="shotLightboxCaption"></p>
+</dialog>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <img class="footer-logo-img" src="assets/logo-full.png" alt="StitchFYN" width="180" height="40">
+      <p class="footer-tagline">The tailor's covenant. The customer's peace of mind.</p>
+      <p class="footer-copy">&copy; 2026 Bigeen Solutions. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <a href="#" data-app-link="/login">Sign in</a>
+      <a href="index.html">Home</a>
+      <a href="index.html#verify">Verify a Seal</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:info@bigeensolutions.com">Contact</a>
+      <a href="#top">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="main.js"></script>
+<script src="guide.js"></script>
+</body>
+</html>
