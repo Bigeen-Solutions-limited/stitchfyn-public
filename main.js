@@ -1,6 +1,5 @@
-/* ---------- Site config — set both before going public ---------- */
-// TODO(owner): your real Formspree endpoint, e.g. https://formspree.io/f/abcd1234
-var FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+/* ---------- Site config ---------- */
+var FORMSPREE_ENDPOINT = 'https://formspree.io/f/movwonva';
 // TODO(owner): the production web app origin, no trailing slash, e.g. https://app.stitchfyn.com
 var APP_URL = '';
 
