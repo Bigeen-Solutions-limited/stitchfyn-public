@@ -50,12 +50,28 @@ $(function () {
   var $burger = $('#navBurger');
   $burger.on('click', function () {
     var isOpen = $nav.toggleClass('menu-open').hasClass('menu-open');
-    $burger.attr('aria-expanded', isOpen);
+    $burger.attr('aria-expanded', isOpen).attr('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    $('body').toggleClass('menu-locked', isOpen);
   });
 
-  $('.nav-overlay-link, .nav-overlay-cta').on('click', function () {
+  function closeMenu() {
     $nav.removeClass('menu-open');
-    $burger.attr('aria-expanded', false);
+    $burger.attr('aria-expanded', false).attr('aria-label', 'Open menu');
+    $('body').removeClass('menu-locked');
+  }
+
+  $('.nav-overlay-link, .nav-overlay-cta').on('click', closeMenu);
+
+  $(document).on('keydown', function (e) {
+    if (e.key === 'Escape' && $nav.hasClass('menu-open')) {
+      closeMenu();
+      $burger.trigger('focus');
+    }
+  });
+
+  // Leaving the phone layout with the menu open must not strand the page locked
+  $(window).on('resize', function () {
+    if (window.innerWidth > 960) closeMenu();
   });
 
   /* ---------- Smooth scroll for in-page anchors ---------- */
@@ -215,7 +231,9 @@ $(function () {
       city: $.trim($form.find('[name="city"]').val()),
       whatsapp: $.trim($form.find('[name="whatsapp"]').val()),
       experience: $form.find('[name="experience"]').val(),
-      staffCount: $form.find('[name="staffCount"]').val()
+      staffCount: $form.find('[name="staffCount"]').val(),
+      _subject: 'Founding Tailor application: ' + $.trim($form.find('[name="shopName"]').val()),
+      _gotcha: $form.find('[name="_gotcha"]').val()
     };
 
     var $submitBtn = $form.find('.form-submit');

@@ -1,0 +1,14 @@
+{
+  "name": "StitchFYN",
+  "short_name": "StitchFYN",
+  "description": "Proof for the tailor. Peace of mind for the customer.",
+  "start_url": "./",
+  "display": "standalone",
+  "theme_color": "#163d28",
+  "background_color": "#163d28",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
