@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bigeen-solutions-limited.github.io/stitchfyn-public/sitemap.xml
+Sitemap: https://www.stitchfyn.com/sitemap.xml
