@@ -151,7 +151,8 @@ $(function () {
     });
   }, { threshold: 0.5 });
 
-  document.querySelectorAll('.stat-number').forEach(function (el) {
+  // Only counted numbers animate; word tiles ("One tap") have no data-target
+  document.querySelectorAll('.stat-number[data-target]').forEach(function (el) {
     statObserver.observe(el);
   });
 
