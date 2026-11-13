@@ -30,6 +30,23 @@ Link between pages with the relative `.html` file name (`features.html`). Canoni
 
 Every public claim must match what the app does today (see `DECISIONS.md`, DEC-001, in the parent folder). Check new wording against the app before it goes live.
 
+## Configuration (top of `main.js`)
+
+| Setting | Value | What it does |
+|---|---|---|
+| `FORMSPREE_ENDPOINT` | `https://formspree.io/f/movwonva` | Where the Early Adopter form posts |
+| `APP_URL` | `https://app.stitchfyn.com` | Turns on the Sign in links and the seal check on `verify.html`, which opens `APP_URL/public/seals/<code>`. After changing it, run `node scripts/sync-partials.mjs` so the pages' Sign in links match |
+| `CF_ANALYTICS_TOKEN` | empty | Cloudflare Web Analytics (DEC-012). Empty means no analytics script loads |
+
+### Turning on Cloudflare Web Analytics
+
+Use one of these, not both (both would count every visit twice):
+
+1. **Automatic setup (no code change).** In the Cloudflare dashboard, turn on Web Analytics for the Pages project (under the project's metrics; menu names change from time to time). Cloudflare then adds the beacon itself. Leave `CF_ANALYTICS_TOKEN` empty.
+2. **Token in `main.js`.** In the dashboard's Web Analytics section, add the site, copy the token from the JS snippet it shows, and paste it into `CF_ANALYTICS_TOKEN`. `main.js` then adds `https://static.cloudflareinsights.com/beacon.min.js` with `data-cf-beacon` on every page.
+
+Cloudflare Web Analytics sets no cookies; DEC-012 chose it over Google Analytics partly to avoid a consent banner. `privacy.html` describes it under "Counting visits"; keep that paragraph in step with whichever analytics is actually on.
+
 ## Shared header, footer and Apply bar
 
 The nav, the footer and the phone Apply bar are written once in `partials/` and copied into every page by a small script (Node built-ins only):

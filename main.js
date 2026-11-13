@@ -1,7 +1,23 @@
 /* ---------- Site config ---------- */
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/movwonva';
-// TODO(owner): the production web app origin, no trailing slash, e.g. https://app.stitchfyn.com
-const APP_URL = '';
+// The production web app origin, no trailing slash (D-M8). Turns on the Sign in
+// links and the seal check. scripts/sync-partials.mjs also writes it into the
+// pages' Sign in links, so run it after changing this.
+const APP_URL = 'https://app.stitchfyn.com';
+// Cloudflare Web Analytics (DEC-012): page views only, no cookies. Paste the site
+// token from the Cloudflare dashboard to turn it on; while it is empty nothing
+// loads. Leave it empty if automatic setup is on for the Pages project instead.
+const CF_ANALYTICS_TOKEN = '';
+
+/* ---------- Cloudflare Web Analytics ---------- */
+(function () {
+  if (!CF_ANALYTICS_TOKEN) return;
+  const beacon = document.createElement('script');
+  beacon.defer = true;
+  beacon.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  beacon.setAttribute('data-cf-beacon', JSON.stringify({ token: CF_ANALYTICS_TOKEN }));
+  document.head.appendChild(beacon);
+})();
 
 /* ---------- Old one-page links ---------- */
 // The site used to be one long page. Old section links on the home page
