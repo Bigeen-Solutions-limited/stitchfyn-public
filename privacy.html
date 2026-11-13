@@ -29,14 +29,40 @@
 </head>
 <body class="legal-page">
 
-<nav class="nav is-scrolled">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- header:start (generated from partials/header.html; edit the partial, then run scripts/sync-partials.mjs) -->
+<nav class="nav is-scrolled" id="nav" data-nav-solid aria-label="Main">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo" aria-label="StitchFYN home"><img class="nav-logo-dark" src="assets/logo-horizontal-on-dark.png" alt="StitchFYN" width="151" height="50"><img class="nav-logo-light" src="assets/logo-horizontal-on-light.png" alt="StitchFYN" width="151" height="50"></a>
-    <a href="index.html#founding" class="btn btn-amber nav-cta">Apply Now</a>
+    <div class="nav-links">
+      <a href="how-it-works.html">How it works</a>
+      <a href="features.html">Features</a>
+      <a href="verify.html">Verify a Seal</a>
+      <a href="faq.html">FAQ</a>
+      <a href="guide.html">Guide</a>
+    </div>
+    <div class="nav-actions">
+      <a href="#" class="nav-signin" data-app-link="/login">Sign in</a>
+      <a href="early-adopters.html" class="btn btn-amber nav-cta">Apply</a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="navOverlay">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-overlay" id="navOverlay">
+    <a href="how-it-works.html" class="nav-overlay-link">How it works</a>
+    <a href="features.html" class="nav-overlay-link">Features</a>
+    <a href="verify.html" class="nav-overlay-link">Verify a Seal</a>
+    <a href="faq.html" class="nav-overlay-link">FAQ</a>
+    <a href="guide.html" class="nav-overlay-link">Guide</a>
+    <a href="#" class="nav-overlay-link" data-app-link="/login">Sign in</a>
+    <a href="early-adopters.html" class="btn btn-amber nav-overlay-cta">Apply</a>
   </div>
 </nav>
+<!-- header:end -->
 
-<main class="legal">
+<main class="legal" id="main">
   <div class="container container-narrow">
     <h1>Privacy notice</h1>
     <p class="legal-updated">Last updated 31 October 2026</p>
@@ -63,14 +89,38 @@
   </div>
 </main>
 
+<!-- footer:start (generated from partials/footer.html; edit the partial, then run scripts/sync-partials.mjs) -->
 <footer class="footer">
   <div class="container footer-inner">
     <div class="footer-left">
       <img class="footer-logo-img" src="assets/logo-horizontal-on-dark.png" alt="StitchFYN" width="216" height="72" loading="lazy">
+      <p class="footer-tagline">Proof for the tailor. Peace of mind for the customer.</p>
       <p class="footer-copy">&copy; 2026 Bigeen Solutions. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <a href="how-it-works.html">How it works</a>
+      <a href="features.html">Features</a>
+      <a href="verify.html">Verify a Seal</a>
+      <a href="faq.html">FAQ</a>
+      <a href="guide.html">Guide</a>
+      <a href="early-adopters.html">Early Adopters</a>
+      <a href="#" data-app-link="/login">Sign in</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:info@bigeensolutions.com">Contact</a>
     </div>
   </div>
 </footer>
+<!-- footer:end -->
 
+<!-- apply-bar:start (generated from partials/apply-bar.html; edit the partial, then run scripts/sync-partials.mjs) -->
+<!-- Phones only (768px and narrower): keeps Apply one tap away. The spacer lets the page scroll clear of the bar. -->
+<div class="apply-bar-spacer" aria-hidden="true"></div>
+<div class="apply-bar">
+  <a href="early-adopters.html" class="btn btn-amber apply-bar-btn">Apply as an Early Adopter</a>
+</div>
+<!-- apply-bar:end -->
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="main.js"></script>
 </body>
 </html>

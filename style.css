@@ -1866,3 +1866,11 @@ section[id], .callout[id] { scroll-margin-top: 84px; }
   text-align: center;
 }
 .apply-bar-btn:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 2px; }
+
+/* One h1 per page means some headings move up a level on the split pages.
+   These give them exactly the look they had at the old level. */
+.journey-step h2 { color: var(--color-primary); font-size: 1.15rem; margin-bottom: 10px; }
+.platform-col h2 { font-size: 1.25rem; margin-bottom: 14px; }
+.feature h3 { color: var(--color-amber-light); font-size: 1.02rem; margin-bottom: 8px; }
+.founding-list h2 { color: var(--color-amber); font-size: 1.05rem; margin-bottom: 18px; }
+.callout h2 { color: var(--color-primary); font-size: 1.4rem; margin-bottom: 16px; }

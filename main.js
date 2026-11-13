@@ -3,6 +3,25 @@ const FORMSPREE_ENDPOINT = 'https://formspree.io/f/movwonva';
 // TODO(owner): the production web app origin, no trailing slash, e.g. https://app.stitchfyn.com
 const APP_URL = '';
 
+/* ---------- Old one-page links ---------- */
+// The site used to be one long page. Old section links on the home page
+// (/#how, /#faq, ...) go to the page that now holds that content. The part
+// after # never reaches the server, so _redirects cannot do this.
+// /#pattern and /#people still exist on the home page, so they stay.
+(function () {
+  if (document.body.getAttribute('data-page') !== 'home') return;
+  const moved = {
+    '#how': 'how-it-works.html',
+    '#platform': 'features.html',
+    '#proof': 'features.html#proof',
+    '#verify': 'verify.html',
+    '#faq': 'faq.html',
+    '#founding': 'early-adopters.html#founding'
+  };
+  const target = moved[location.hash];
+  if (target) location.replace(target);
+})();
+
 $(function () {
 
   const isLocalPreview = location.protocol === 'file:' ||
@@ -35,8 +54,11 @@ $(function () {
 
   /* ---------- Nav scroll state ---------- */
   const $nav = $('#nav');
+  // Pages with no green header under the nav keep the white bar at the top too
+  const solidNav = $nav.is('[data-nav-solid]');
 
   function updateNavOnScroll() {
+    if (solidNav) return;
     if ($(window).scrollTop() > 40) {
       $nav.addClass('is-scrolled');
     } else {
