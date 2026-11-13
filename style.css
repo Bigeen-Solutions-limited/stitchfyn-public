@@ -1735,3 +1735,134 @@ section[id], .callout[id] { scroll-margin-top: 84px; }
 .photo-card img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
 .photo-card-wide { margin: 0 auto 40px; max-width: 680px; }
 .photo-card-wide img { aspect-ratio: 16 / 9; }
+
+/* ==========================================================================
+   MULTI-PAGE SITE (DEC-011): page tops, Next link, phone Apply bar
+   New classes only; existing components are unchanged.
+   ========================================================================== */
+
+/* Green page header on inner pages, so the transparent nav reads over it */
+.page-hero {
+  position: relative;
+  background: var(--color-primary);
+  overflow: hidden;
+  padding: 140px 0 64px;
+  text-align: center;
+}
+.page-hero .container { position: relative; z-index: 2; max-width: 860px; }
+.page-hero-title {
+  color: var(--color-white);
+  font-size: clamp(1.9rem, 4.6vw, 3rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.page-hero-title span { color: var(--color-amber-light); }
+.page-hero-sub {
+  color: rgba(255,255,255,0.82);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  max-width: 640px;
+  margin: 0 auto;
+}
+@media (max-width: 640px) {
+  .page-hero { padding: 116px 0 48px; }
+}
+
+/* A dark section that opens a page clears the fixed nav */
+.page-top { padding-top: 140px; }
+@media (max-width: 640px) {
+  .page-top { padding-top: 116px; }
+}
+
+/* Current page in the phone menu and footer */
+.nav-overlay-link[aria-current="page"] { color: var(--color-amber); }
+.footer-right a[aria-current="page"] { color: var(--color-amber); }
+
+/* Stats that are words rather than counted numbers */
+.stat-number.stat-text { font-size: clamp(1.4rem, 3.2vw, 2.1rem); }
+
+/* Home: three benefit tiles */
+.benefit-section { background: var(--color-bg); }
+.benefit-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .benefit-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+}
+.benefit {
+  background: var(--color-white);
+  border-radius: 16px;
+  padding: 28px;
+  border-top: 3px solid var(--color-amber);
+}
+.benefit h3 { color: var(--color-primary); font-size: 1.2rem; margin-bottom: 10px; }
+.benefit p { color: var(--color-text); font-size: 0.98rem; }
+
+/* Standalone callout (one per row) */
+.callout-single { max-width: 760px; margin: 0 auto; }
+
+/* Next: one large link at the end of each page */
+.next-step {
+  padding: 56px 0 72px;
+  background: var(--color-white);
+  text-align: center;
+}
+.guide-page .next-step { background: transparent; padding-bottom: 24px; }
+.next-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 16px 36px;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.15rem;
+  transition: background 0.25s var(--ease);
+}
+.next-link:hover { background: var(--color-primary-light); }
+.next-link:focus-visible { outline: 3px solid var(--color-amber); outline-offset: 3px; }
+.next-link-arrow { display: inline-block; transition: transform 0.25s var(--ease); }
+.next-link:hover .next-link-arrow { transform: translateX(4px); }
+@media (max-width: 480px) {
+  .next-link { width: 100%; }
+}
+
+/* Phone Apply bar: fixed to the bottom on screens 768px and narrower.
+   The spacer after the footer keeps the footer's last line clear of the bar. */
+.apply-bar,
+.apply-bar-spacer { display: none; }
+@media (max-width: 768px) {
+  .apply-bar {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 900;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 -4px 20px rgba(26, 35, 64, 0.12);
+  }
+  .apply-bar-spacer {
+    display: block;
+    height: calc(68px + env(safe-area-inset-bottom));
+    background: var(--color-deep);
+  }
+}
+.apply-bar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 20px;
+  white-space: normal;
+  text-align: center;
+}
+.apply-bar-btn:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 2px; }
