@@ -1,0 +1,8 @@
+{
+  "name": "stitchfyn-public",
+  "private": true,
+  "description": "StitchFYN marketing site. Static HTML; no dependencies.",
+  "scripts": {
+    "build": "node scripts/sync-partials.mjs --check"
+  }
+}

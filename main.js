@@ -1,7 +1,42 @@
 /* ---------- Site config ---------- */
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/movwonva';
-// TODO(owner): the production web app origin, no trailing slash, e.g. https://app.stitchfyn.com
-const APP_URL = '';
+// The production web app origin, no trailing slash (D-M8). Turns on the Sign in
+// links and the seal check. scripts/sync-partials.mjs also writes it into the
+// pages' Sign in links, so run it after changing this.
+const APP_URL = 'https://app.stitchfyn.com';
+// Cloudflare Web Analytics (DEC-012): page views only, no cookies. Paste the site
+// token from the Cloudflare dashboard to turn it on; while it is empty nothing
+// loads. Leave it empty if automatic setup is on for the Pages project instead.
+const CF_ANALYTICS_TOKEN = '';
+
+/* ---------- Cloudflare Web Analytics ---------- */
+(function () {
+  if (!CF_ANALYTICS_TOKEN) return;
+  const beacon = document.createElement('script');
+  beacon.defer = true;
+  beacon.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  beacon.setAttribute('data-cf-beacon', JSON.stringify({ token: CF_ANALYTICS_TOKEN }));
+  document.head.appendChild(beacon);
+})();
+
+/* ---------- Old one-page links ---------- */
+// The site used to be one long page. Old section links on the home page
+// (/#how, /#faq, ...) go to the page that now holds that content. The part
+// after # never reaches the server, so _redirects cannot do this.
+// /#pattern and /#people still exist on the home page, so they stay.
+(function () {
+  if (document.body.getAttribute('data-page') !== 'home') return;
+  const moved = {
+    '#how': 'how-it-works.html',
+    '#platform': 'features.html',
+    '#proof': 'features.html#proof',
+    '#verify': 'verify.html',
+    '#faq': 'faq.html',
+    '#founding': 'early-adopters.html#founding'
+  };
+  const target = moved[location.hash];
+  if (target) location.replace(target);
+})();
 
 $(function () {
 
@@ -35,8 +70,11 @@ $(function () {
 
   /* ---------- Nav scroll state ---------- */
   const $nav = $('#nav');
+  // Pages with no green header under the nav keep the white bar at the top too
+  const solidNav = $nav.is('[data-nav-solid]');
 
   function updateNavOnScroll() {
+    if (solidNav) return;
     if ($(window).scrollTop() > 40) {
       $nav.addClass('is-scrolled');
     } else {
@@ -129,7 +167,8 @@ $(function () {
     });
   }, { threshold: 0.5 });
 
-  document.querySelectorAll('.stat-number').forEach(function (el) {
+  // Only counted numbers animate; word tiles ("One tap") have no data-target
+  document.querySelectorAll('.stat-number[data-target]').forEach(function (el) {
     statObserver.observe(el);
   });
 

@@ -1,0 +1,18 @@
+// Cloudflare Workers static-assets config for www.stitchfyn.com.
+// There is no Worker script: Cloudflare serves the files in this folder as they are.
+// "name" must match the Workers project, or Workers Builds refuses to deploy.
+{
+  "name": "stitchfyn-public",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./",
+    // Serves /guide for guide.html and redirects /guide.html to /guide, which the
+    // canonical URLs and sitemap rely on.
+    "html_handling": "auto-trailing-slash",
+    // Missing paths get 404.html with a 404 status.
+    "not_found_handling": "404-page"
+  },
+  // Workers Builds deploys non-production branches with `wrangler preview`, which
+  // refuses to run without this block. Empty means previews use the settings above.
+  "previews": {}
+}

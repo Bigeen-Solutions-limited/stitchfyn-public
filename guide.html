@@ -40,34 +40,36 @@
 <a class="skip-link" href="#guide-content">Skip to the guide</a>
 
 <!-- ============ NAV ============ -->
-<nav class="nav" id="nav">
+<!-- header:start (generated from partials/header.html; edit the partial, then run scripts/sync-partials.mjs) -->
+<nav class="nav" id="nav" aria-label="Main">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo" aria-label="StitchFYN home"><img class="nav-logo-dark" src="assets/logo-horizontal-on-dark.png" alt="StitchFYN" width="151" height="50"><img class="nav-logo-light" src="assets/logo-horizontal-on-light.png" alt="StitchFYN" width="151" height="50"></a>
     <div class="nav-links">
-      <a href="index.html#how">How it works</a>
-      <a href="index.html#platform">The Platform</a>
-      <a href="guide.html" aria-current="page">How to Use</a>
-      <a href="index.html#verify">Verify a Seal</a>
-      <a href="index.html#faq">FAQ</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="features.html">Features</a>
+      <a href="verify.html">Verify a Seal</a>
+      <a href="faq.html">FAQ</a>
+      <a href="guide.html" aria-current="page">Guide</a>
     </div>
     <div class="nav-actions">
-      <a href="#" class="nav-signin" data-app-link="/login">Sign in</a>
-      <a href="index.html#founding" class="btn btn-amber nav-cta">Apply Now</a>
+      <a href="https://app.stitchfyn.com/login" class="nav-signin" data-app-link="/login">Sign in</a>
+      <a href="early-adopters.html" class="btn btn-amber nav-cta">Apply</a>
     </div>
-    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+    <button type="button" class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="navOverlay">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="nav-overlay" id="navOverlay">
-    <a href="index.html#how" class="nav-overlay-link">How it works</a>
-    <a href="index.html#platform" class="nav-overlay-link">The Platform</a>
-    <a href="guide.html" class="nav-overlay-link">How to Use</a>
-    <a href="index.html#verify" class="nav-overlay-link">Verify a Seal</a>
-    <a href="index.html#faq" class="nav-overlay-link">FAQ</a>
-    <a href="#" class="nav-overlay-link" data-app-link="/login">Sign in</a>
-    <a href="index.html#founding" class="btn btn-amber nav-overlay-cta">Apply as an Early Adopter</a>
+    <a href="how-it-works.html" class="nav-overlay-link">How it works</a>
+    <a href="features.html" class="nav-overlay-link">Features</a>
+    <a href="verify.html" class="nav-overlay-link">Verify a Seal</a>
+    <a href="faq.html" class="nav-overlay-link">FAQ</a>
+    <a href="guide.html" aria-current="page" class="nav-overlay-link">Guide</a>
+    <a href="https://app.stitchfyn.com/login" class="nav-overlay-link" data-app-link="/login">Sign in</a>
+    <a href="early-adopters.html" class="btn btn-amber nav-overlay-cta">Apply</a>
   </div>
 </nav>
+<!-- header:end -->
 
 <!-- ============ GUIDE HERO ============ -->
 <header class="guide-hero" id="top">
@@ -76,11 +78,11 @@
   <div class="container guide-hero-inner">
     <p class="section-kicker kicker-light">How to use StitchFYN</p>
     <h1 class="guide-hero-title">From fabric drop-off to collection, <span>step by step</span></h1>
-    <p class="guide-hero-sub">Every screenshot below comes from the working StitchFYN app, following one real order through the workshop: a cord lace gown for a wedding, from intake to collection.</p>
+    <p class="guide-hero-sub">Every screenshot below comes from the working StitchFYN app, following one sample order through the workshop: a cord lace gown for a wedding, from intake to collection.</p>
     <ul class="guide-legend" aria-label="Who does each step">
       <li><span class="role role-owner">Owner</span> sets up the workshop and runs orders</li>
       <li><span class="role role-tailor">Tailor</span> works through production stages</li>
-      <li><span class="role role-customer">Customer</span> confirms from their own phone</li>
+      <li><span class="role role-customer">Customer</span> confirms from their own phone, or in person with you</li>
     </ul>
   </div>
 </header>
@@ -91,7 +93,7 @@
   <aside class="guide-toc" aria-label="Guide contents">
     <details class="guide-toc-box" id="guideToc" open>
       <summary>Jump to a step</summary>
-      <nav>
+      <nav aria-label="Guide steps">
         <p class="toc-part">Get started</p>
         <ol start="1">
           <li><a href="#step-1">Activate your workspace</a></li>
@@ -454,7 +456,7 @@
     <!-- ===================== PART 4 ===================== -->
     <section class="guide-part" aria-labelledby="part-4">
       <h2 class="guide-part-title" id="part-4"><span>Part 4</span> Three checks before cutting</h2>
-      <p class="guide-part-intro">Production cannot start until three things are on record: the deposit, the fabric and the design brief. On the order page, under <em>Status transitions</em>, StitchFYN shows which are still outstanding: <em>Deposit required</em>, <em>Fabric unconfirmed</em> and <em>Design pending</em>.</p>
+      <p class="guide-part-intro">Production cannot start until the fabric and design brief are confirmed and the deposit is recorded (or the owner waives the deposit, with a reason on record). On the order page, under <em>Status transitions</em>, StitchFYN shows which are still outstanding: <em>Deposit required</em>, <em>Fabric unconfirmed</em> and <em>Design pending</em>.</p>
 
       <article class="guide-step" id="step-11" aria-labelledby="step-11-title">
         <header class="guide-step-head">
@@ -497,7 +499,7 @@
             <li>Click <em>Capture Fabric Photo</em>. On a phone this opens the camera; photograph the fabric the customer brought.</li>
             <li>If the customer is with you, click <em>Confirm Fabric</em>, check the recorded quantity with them, and click <em>Confirm Fabric</em> again. Otherwise the customer confirms from their own order page.</li>
           </ol>
-          <p class="guide-result"><strong>What happens next:</strong> StitchFYN issues a <strong>Fabric Safety Seal</strong>: a QR code and a verification code (for example FSS-2N7Q-QHZZ) that anyone can check. Use <em>Share via SMS</em> to send it to the customer. Confirmation cannot be undone; the fabric record is locked from then on.</p>
+          <p class="guide-result"><strong>What happens next:</strong> StitchFYN issues a <strong>Fabric Safety Seal</strong>: a QR code and a verification code (for example FSS-2N7Q-QHZZ) that anyone can check. Use <em>Share via SMS</em> to send it to the customer. Confirmation cannot be undone; any later move is recorded with a reason.</p>
         </div>
         <div class="guide-shots guide-shots-split guide-shots-reverse">
           <figure class="guide-shot">
@@ -531,7 +533,7 @@
               <li>Click <em>Create Brief</em>. The brief shows <em>Awaiting customer confirmation</em>.</li>
               <li>The customer opens their private StitchFYN order page on their phone, reads the brief and taps <em>Confirm Design Brief</em>.</li>
             </ol>
-            <p class="guide-result"><strong>What happens next:</strong> once the deposit, fabric and brief are all confirmed, the order is ready for production. No more "that's not what I asked for".</p>
+            <p class="guide-result"><strong>What happens next:</strong> once the fabric and brief are confirmed and the deposit is recorded (or waived by the owner, with a reason on record), the order is ready for production. No more "that's not what I asked for".</p>
             <figure class="guide-shot guide-shot-small">
               <button type="button" class="shot-zoom" data-full="assets/guide/12-design-brief.webp" aria-label="Enlarge screenshot: the Design Brief dialog">
                 <img src="assets/guide/12-design-brief.webp" width="600" height="382" loading="lazy" alt="The Design Brief dialog: silhouette mermaid fitted to the knee, sweetheart hand-beaded neckline, princess seams, concealed lace-trimmed zip and notes about a matching gele.">
@@ -696,7 +698,7 @@
             <li>Click <em>Export Evidence</em> to download the order's evidence as a PDF, ready to share if there is ever a dispute.</li>
             <li>Click <em>Forensic Proof</em> to see the order's full record, headed <em>Immutable Audit Trail</em>: every action, who did it and when. "Immutable" means nothing in it can be edited or deleted. Each entry also carries a signature (shown as <em>SIG</em>), a digital stamp that shows the entry has not been tampered with.</li>
           </ol>
-          <p class="guide-result"><strong>What happens next:</strong> the order counts towards your StitchScore, and its records stay locked and can be checked at any time.</p>
+          <p class="guide-result"><strong>What happens next:</strong> the order counts towards your StitchScore, and its records can be checked at any time.</p>
         </div>
         <div class="guide-shots guide-shots-split">
           <figure class="guide-shot">
@@ -726,8 +728,8 @@
           <p>Customers don't need an app or an account. Everything works in the phone's browser.</p>
           <ul class="guide-list">
             <li><strong>Tracking page:</strong> a greeting, the current stage, the delivery date and every stage of production, updated as your team works.</li>
-            <li><strong>Order page:</strong> the order status, the production timeline with your team's progress photos, fabric and design confirmations, payments made, a message thread with your workshop, and <em>Report a problem with this order</em>.</li>
-            <li><strong>Seal check:</strong> anyone can confirm a Fabric Safety Seal by scanning its QR code or entering its code under <a href="index.html#verify">Verify a Seal</a>. It shows the tailor, business, date logged and quantity.</li>
+            <li><strong>Order page:</strong> the order status, the production timeline with your team's progress photos, fabric and design confirmations, payments made, and a message thread with your workshop.</li>
+            <li><strong>Seal check:</strong> anyone can confirm a Fabric Safety Seal by scanning its QR code or entering its code under <a href="verify.html">Verify a Seal</a>. It shows the tailor, business, date logged and quantity.</li>
           </ul>
         </div>
         <div class="guide-shots guide-shots-phones">
@@ -781,10 +783,14 @@
       <h2 id="guide-end-title">Ready to run your workshop on StitchFYN?</h2>
       <p>We are onboarding Early Adopters now. Apply, and we will set up your workspace and walk you through these steps.</p>
       <div class="guide-end-actions">
-        <a href="index.html#founding" class="btn btn-amber btn-large">Apply as an Early Adopter</a>
-        <a href="#" class="btn btn-ghost-dark btn-large" data-app-link="/login">Sign in to StitchFYN</a>
+        <a href="early-adopters.html" class="btn btn-amber btn-large">Apply as an Early Adopter</a>
+        <a href="https://app.stitchfyn.com/login" class="btn btn-ghost-dark btn-large" data-app-link="/login">Sign in to StitchFYN</a>
       </div>
       <p class="guide-end-top"><a href="#top">Back to top</a></p>
+    </section>
+
+    <section class="next-step" aria-label="Next page">
+      <a class="next-link" href="early-adopters.html">Next: Early Adopters <span class="next-link-arrow" aria-hidden="true">&rarr;</span></a>
     </section>
 
   </main>
@@ -798,6 +804,7 @@
 </dialog>
 
 <!-- ============ FOOTER ============ -->
+<!-- footer:start (generated from partials/footer.html; edit the partial, then run scripts/sync-partials.mjs) -->
 <footer class="footer">
   <div class="container footer-inner">
     <div class="footer-left">
@@ -806,15 +813,27 @@
       <p class="footer-copy">&copy; 2026 Bigeen Solutions. All rights reserved.</p>
     </div>
     <div class="footer-right">
-      <a href="#" data-app-link="/login">Sign in</a>
-      <a href="index.html">Home</a>
-      <a href="index.html#verify">Verify a Seal</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="features.html">Features</a>
+      <a href="verify.html">Verify a Seal</a>
+      <a href="faq.html">FAQ</a>
+      <a href="guide.html" aria-current="page">Guide</a>
+      <a href="early-adopters.html">Early Adopters</a>
+      <a href="https://app.stitchfyn.com/login" data-app-link="/login">Sign in</a>
       <a href="privacy.html">Privacy</a>
       <a href="mailto:info@bigeensolutions.com">Contact</a>
-      <a href="#top">Back to top</a>
     </div>
   </div>
 </footer>
+<!-- footer:end -->
+
+<!-- apply-bar:start (generated from partials/apply-bar.html; edit the partial, then run scripts/sync-partials.mjs) -->
+<!-- Phones only (768px and narrower): keeps Apply one tap away. The spacer lets the page scroll clear of the bar. -->
+<div class="apply-bar-spacer" aria-hidden="true"></div>
+<div class="apply-bar">
+  <a href="early-adopters.html" class="btn btn-amber apply-bar-btn">Apply as an Early Adopter</a>
+</div>
+<!-- apply-bar:end -->
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="main.js"></script>

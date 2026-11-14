@@ -1,0 +1,16 @@
+# Cloudflare Pages redirects (https://developers.cloudflare.com/pages/configuration/redirects/).
+# Old one-page section links such as /#how are handled in main.js instead:
+# the part after # never reaches the server.
+/apply           /early-adopters  301
+/founding        /early-adopters  301
+/early-adopter   /early-adopters  301
+/how             /how-it-works    301
+/platform        /features        301
+/proof           /features        301
+/pattern         /                301
+/verify-a-seal   /verify          301
+# Edit-time sources, not pages
+/partials/*      /                301
+/scripts/*       /                301
+/README          /                301
+/README.md       /                301
