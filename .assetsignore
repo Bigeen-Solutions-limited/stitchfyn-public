@@ -1,0 +1,12 @@
+# Files in the repo that are not part of the public site (wrangler.jsonc "assets").
+.git
+.gitignore
+.nojekyll
+node_modules
+package.json
+package-lock.json
+wrangler.jsonc
+README.md
+partials
+scripts
+.wrangler
