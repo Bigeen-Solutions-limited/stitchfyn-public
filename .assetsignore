@@ -10,3 +10,4 @@ README.md
 partials
 scripts
 .wrangler
+vercel.json
