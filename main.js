@@ -1,8 +1,7 @@
 /* ---------- Site config ---------- */
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/movwonva';
 // The production web app origin, no trailing slash (D-M8). Turns on the Sign in
-// links and the seal check. scripts/sync-partials.mjs also writes it into the
-// pages' Sign in links, so run it after changing this.
+// and Apply (sign-up) links and the seal check. scripts/sync-partials.mjs also
+// writes it into the pages' Sign in and Apply links, so run it after changing this.
 const APP_URL = 'https://app.stitchfyn.com';
 // Cloudflare Web Analytics (DEC-012): page views only, no cookies. Paste the site
 // token from the Cloudflare dashboard to turn it on; while it is empty nothing
@@ -39,9 +38,6 @@ const CF_ANALYTICS_TOKEN = '';
 })();
 
 $(function () {
-
-  const isLocalPreview = location.protocol === 'file:' ||
-    /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
 
   /* ---------- Links into the web app ---------- */
   // Hidden until APP_URL is set, so visitors never hit a dead "Sign in".
@@ -198,131 +194,6 @@ $(function () {
   if (stickyCta && document.querySelector('.hero') && document.getElementById('founding')) {
     stickyObserver.observe(document.querySelector('.hero'));
     stickyObserver.observe(document.getElementById('founding'));
-  }
-
-  /* ---------- Early Adopter form ---------- */
-  const $form = $('#foundingForm');
-  const $success = $('#foundingSuccess');
-  const $alert = $('#formAlert');
-
-  function setError($row, message) {
-    $row.addClass('has-error');
-    $row.find('.form-error').text(message);
-  }
-
-  function clearError($row) {
-    $row.removeClass('has-error');
-    $row.find('.form-error').text('');
-  }
-
-  // Clear a field's error the moment the user starts fixing it
-  $form.on('input change', 'input, select', function () {
-    clearError($(this).closest('.form-row'));
-    $alert.prop('hidden', true);
-  });
-
-  // Accept 080XXXXXXXX (11 digits) or +234 formats — don't reject a real lead
-  // over formatting.
-  function isValidNigerianPhone(value) {
-    const digits = value.replace(/\D/g, '');
-    return /^0\d{10}$/.test(digits) || /^234\d{10}$/.test(digits);
-  }
-
-  function isValidEmail(value) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-  }
-
-  $form.on('submit', function (e) {
-    e.preventDefault();
-
-    let valid = true;
-    let $firstErrorRow = null;
-    const fields = ['ownerFullName', 'companyName', 'ownerEmail', 'country', 'whatsapp'];
-
-    fields.forEach(function (name) {
-      const $input = $form.find('[name="' + name + '"]');
-      const $row = $input.closest('.form-row');
-      clearError($row);
-
-      const value = $.trim($input.val());
-      let message = null;
-
-      if (!value) {
-        message = 'This field is required.';
-      } else if (name === 'ownerEmail' && !isValidEmail(value)) {
-        message = 'Enter a valid email address, e.g. you@example.com.';
-      } else if (name === 'whatsapp' && !isValidNigerianPhone(value)) {
-        message = 'Enter a valid WhatsApp number, e.g. 08012345678.';
-      }
-
-      if (message) {
-        setError($row, message);
-        valid = false;
-        if (!$firstErrorRow) $firstErrorRow = $row;
-      }
-    });
-
-    if (!valid) {
-      $firstErrorRow.find('input, select').trigger('focus');
-      return;
-    }
-
-    const ownerFullName = $.trim($form.find('[name="ownerFullName"]').val());
-    const firstName = ownerFullName.split(' ')[0];
-    const companyName = $.trim($form.find('[name="companyName"]').val());
-
-    // Field names match the system admin's Create Company form
-    const payload = {
-      ownerFullName: ownerFullName,
-      companyName: companyName,
-      ownerEmail: $.trim($form.find('[name="ownerEmail"]').val()),
-      country: $.trim($form.find('[name="country"]').val()),
-      whatsapp: $.trim($form.find('[name="whatsapp"]').val()),
-      _subject: 'Early Adopter application: ' + companyName,
-      _gotcha: $form.find('[name="_gotcha"]').val()
-    };
-
-    const $submitBtn = $form.find('.form-submit');
-    $submitBtn.prop('disabled', true).text('Sending...');
-    $alert.prop('hidden', true);
-
-    // A placeholder endpoint only fakes success in a local preview. On a real
-    // host it shows the retry alert instead, so a lead is never silently lost.
-    const endpointIsPlaceholder = FORMSPREE_ENDPOINT.indexOf('YOUR_FORM_ID') !== -1;
-
-    $.ajax({
-      url: FORMSPREE_ENDPOINT,
-      method: 'POST',
-      data: payload,
-      dataType: 'json'
-    }).done(function () {
-      showSuccess(firstName);
-    }).fail(function () {
-      if (endpointIsPlaceholder && isLocalPreview) {
-        showSuccess(firstName);
-        return;
-      }
-      // Keep the lead: re-enable the button, keep their details, show retry.
-      $submitBtn.prop('disabled', false).text('Apply Now');
-      $alert.prop('hidden', false);
-    });
-  });
-
-  function showSuccess(firstName) {
-    $form.hide();
-    $('.trust-row').hide();
-    $success.find('.founding-success-msg').text(
-      'Application received, ' + firstName + '. We will reach you on WhatsApp within 48 hours ' +
-      'to set up your workshop. Thank you for trusting us with your December.'
-    );
-
-    const shareText = 'I just applied to be a StitchFYN Early Adopter — free during the ' +
-      'early access period, 50 spots only. Every tailor with a December story should see this: ' +
-      window.location.href;
-    $('#shareWhatsapp').attr('href', 'https://wa.me/?text=' + encodeURIComponent(shareText));
-
-    $success.prop('hidden', false);
-    if (stickyCta) { stickyCta.classList.remove('is-shown'); }
   }
 
 });

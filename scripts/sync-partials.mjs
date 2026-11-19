@@ -7,8 +7,9 @@
 //   partials/footer.html     the footer
 //   partials/apply-bar.html  the Apply bar fixed to the bottom of phone screens
 //
-// In a partial, {{SIGN_IN_URL}} becomes APP_URL + "/login", read from main.js
-// (or "#" while APP_URL is empty, and main.js then hides the link).
+// In a partial, {{SIGN_IN_URL}} becomes APP_URL + "/login" and {{SIGN_UP_URL}}
+// becomes APP_URL + "/signup", read from main.js (or "#" while APP_URL is empty,
+// and main.js then hides the link).
 // The link to the page being written gets aria-current="page".
 //
 //   node scripts/sync-partials.mjs          write the shared markup into every page
@@ -26,7 +27,7 @@ const check = process.argv.includes("--check");
 
 // Every page that carries the shared markup.
 //   current:  the href marked aria-current="page" (null on home and privacy)
-//   applyBar: false where the apply form is already on the page
+//   applyBar: false where the page already ends with its own Apply button
 //   solidNav: true where the page has no green hero under the nav
 const PAGES = {
   "index.html": { current: null },
@@ -45,9 +46,10 @@ if (appUrl === undefined) {
   process.exit(1);
 }
 const signInUrl = appUrl ? `${appUrl}/login` : "#";
+const signUpUrl = appUrl ? `${appUrl}/signup` : "#";
 
 const read = (name) =>
-  readFileSync(join(root, "partials", name), "utf8").replace(/\r\n/g, "\n").trimEnd().replaceAll("{{SIGN_IN_URL}}", signInUrl);
+  readFileSync(join(root, "partials", name), "utf8").replace(/\r\n/g, "\n").trimEnd().replaceAll("{{SIGN_IN_URL}}", signInUrl).replaceAll("{{SIGN_UP_URL}}", signUpUrl);
 
 const partials = {
   header: read("header.html"),
@@ -62,7 +64,7 @@ const end = (name) => `<!-- ${name}:end -->`;
 function blockFor(name, opts) {
   let body = partials[name];
   if (name === "apply-bar" && opts.applyBar === false) {
-    body = "<!-- No Apply bar here: the apply form is on this page. -->";
+    body = "<!-- No Apply bar here: this page ends with its own Apply button. -->";
   }
   if (name === "header" && opts.solidNav) {
     body = body.replace('<nav class="nav" id="nav"', '<nav class="nav is-scrolled" id="nav" data-nav-solid');

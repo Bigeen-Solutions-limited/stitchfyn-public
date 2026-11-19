@@ -56,7 +56,7 @@
     </div>
     <div class="nav-actions">
       <a href="https://app.stitchfyn.com/login" class="nav-signin" data-app-link="/login">Sign in</a>
-      <a href="early-adopters.html" aria-current="page" class="btn btn-amber nav-cta">Apply</a>
+      <a href="https://app.stitchfyn.com/signup" data-app-link="/signup" class="btn btn-amber nav-cta">Apply</a>
     </div>
     <button type="button" class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="navOverlay">
       <span></span><span></span><span></span>
@@ -69,7 +69,7 @@
     <a href="faq.html" class="nav-overlay-link">FAQ</a>
     <a href="guide.html" class="nav-overlay-link">Guide</a>
     <a href="https://app.stitchfyn.com/login" class="nav-overlay-link" data-app-link="/login">Sign in</a>
-    <a href="early-adopters.html" aria-current="page" class="btn btn-amber nav-overlay-cta">Apply</a>
+    <a href="https://app.stitchfyn.com/signup" data-app-link="/signup" class="btn btn-amber nav-overlay-cta">Apply</a>
   </div>
 </nav>
 <!-- header:end -->
@@ -112,7 +112,7 @@
     <p class="founding-urgency fade-up">50 spots. Onboarded one workshop at a time.</p>
 
     <div class="section-cta section-cta-dark fade-up">
-      <a href="#founding" class="btn btn-amber btn-large">I Have Lived This — Count Me In</a>
+      <a href="https://app.stitchfyn.com/signup" data-app-link="/signup" class="btn btn-amber btn-large">I Have Lived This — Count Me In</a>
       <p class="section-cta-note">Free during the early access period. We reach you on WhatsApp.</p>
     </div>
   </div>
@@ -149,7 +149,7 @@
 <section class="signup-section" id="founding">
   <div class="container container-narrow">
     <h2 class="signup-headline fade-up">Apply to be an Early Adopter</h2>
-    <p class="signup-sub fade-up">Takes 30 seconds. We set up your workshop with you personally.</p>
+    <p class="signup-sub fade-up">Takes 30 seconds on the sign-up page. We set up your workshop with you personally.</p>
 
     <ul class="trust-row fade-up" aria-label="What you get">
       <li>Free during early access period</li>
@@ -157,58 +157,9 @@
       <li>We reach you on WhatsApp</li>
     </ul>
 
-    <form id="foundingForm" class="founding-form fade-up" novalidate>
-      <!-- Spam trap: people never see it, bots fill it in, and Formspree drops those submissions -->
-      <div class="form-trap" aria-hidden="true">
-        <label for="company_website">Leave this empty</label>
-        <input type="text" id="company_website" name="_gotcha" tabindex="-1" autocomplete="off">
-      </div>
-
-      <div class="form-row">
-        <label for="ownerFullName">Full name</label>
-        <input type="text" id="ownerFullName" name="ownerFullName" autocomplete="name" maxlength="200" required>
-        <span class="form-error" data-error-for="ownerFullName"></span>
-      </div>
-
-      <div class="form-row">
-        <label for="companyName">Business name</label>
-        <input type="text" id="companyName" name="companyName" autocomplete="organization" maxlength="200" required>
-        <span class="form-error" data-error-for="companyName"></span>
-      </div>
-
-      <div class="form-row">
-        <label for="ownerEmail">Email</label>
-        <input type="email" id="ownerEmail" name="ownerEmail" placeholder="you@example.com" autocomplete="email" inputmode="email" maxlength="254" required>
-        <span class="form-error" data-error-for="ownerEmail"></span>
-      </div>
-
-      <div class="form-row">
-        <label for="country">Country</label>
-        <input type="text" id="country" name="country" value="Nigeria" autocomplete="country-name" maxlength="100" required>
-        <span class="form-error" data-error-for="country"></span>
-      </div>
-
-      <div class="form-row">
-        <label for="whatsapp">WhatsApp number</label>
-        <input type="tel" id="whatsapp" name="whatsapp" placeholder="080XXXXXXXX" autocomplete="tel" inputmode="tel" required>
-        <span class="form-error" data-error-for="whatsapp"></span>
-      </div>
-
-      <button type="submit" class="btn btn-amber btn-large form-submit">Apply Now</button>
-
-      <div id="formAlert" class="form-alert" role="alert" hidden>
-        Something went wrong sending your application. Please try again — your details are still here.
-      </div>
-
-      <noscript><p class="signup-privacy">This form needs JavaScript. You can also apply by email: <a href="mailto:info@bigeensolutions.com">info@bigeensolutions.com</a></p></noscript>
-
-      <p class="signup-privacy">We will contact you on WhatsApp and email your sign-in link. We do not sell or share your information. Ever. <a href="privacy.html">Privacy notice</a></p>
-    </form>
-
-    <div id="foundingSuccess" class="founding-success" hidden>
-      <p class="founding-success-msg"></p>
-      <a class="btn success-share" id="shareWhatsapp" href="#" target="_blank" rel="noopener">Tell a fellow tailor on WhatsApp</a>
-      <p class="founding-success-note">Every tailor you know has a December story. Send them this page before the 50 spots fill.</p>
+    <div class="section-cta fade-up">
+      <a href="https://app.stitchfyn.com/signup" data-app-link="/signup" class="btn btn-amber btn-large">Apply Now</a>
+      <p class="signup-privacy">You apply on the StitchFYN sign-up page. We will contact you on WhatsApp and email your sign-in link. We do not sell or share your information. Ever. <a href="privacy.html">Privacy notice</a></p>
     </div>
   </div>
 </section>
@@ -238,7 +189,7 @@
 <!-- footer:end -->
 
 <!-- apply-bar:start (generated from partials/apply-bar.html; edit the partial, then run scripts/sync-partials.mjs) -->
-<!-- No Apply bar here: the apply form is on this page. -->
+<!-- No Apply bar here: this page ends with its own Apply button. -->
 <!-- apply-bar:end -->
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
