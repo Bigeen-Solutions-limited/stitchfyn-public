@@ -784,68 +784,10 @@ section {
   margin-bottom: 44px;
 }
 
-.founding-form {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-
-.form-row {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.form-row label {
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--color-text);
-}
-
-.form-row input,
-.form-row select {
-  padding: 14px 16px;
-  border: 1.5px solid #e2e0d8;
-  border-radius: 10px;
-  background: var(--color-surface);
-  font-size: 1rem;
-  transition: border-color 0.25s var(--ease);
-}
-
-.form-row input:focus,
-.form-row select:focus {
-  outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(22, 61, 40, 0.15);
-}
-
-.form-row.has-error input,
-.form-row.has-error select {
-  border-color: var(--color-amber);
-}
-
 .form-error {
   color: #8a5f00;
   font-size: 0.82rem;
   min-height: 1em;
-}
-
-.form-submit {
-  margin-top: 10px;
-  width: 100%;
-}
-
-.founding-success {
-  text-align: center;
-  padding: 48px 24px;
-  background: var(--color-surface);
-  border-radius: 16px;
-}
-
-.founding-success p {
-  font-size: 1.15rem;
-  color: var(--color-primary);
-  font-weight: 500;
 }
 
 .signup-privacy {
@@ -983,7 +925,7 @@ body.menu-locked { overflow: hidden; }
   color: rgba(255,255,255,0.55);
 }
 
-/* ---------- Trust chips above form ---------- */
+/* ---------- Trust chips above the Apply button ---------- */
 .trust-row {
   display: flex;
   flex-wrap: wrap;
@@ -1006,36 +948,6 @@ body.menu-locked { overflow: hidden; }
   content: "\2713 ";
   color: var(--color-gold-ink);
   font-weight: 700;
-}
-
-/* ---------- Form alert (submission failure) ---------- */
-.form-alert {
-  background: rgba(224, 164, 58, 0.1);
-  border: 1.5px solid var(--color-amber);
-  color: #7a5a00;
-  border-radius: 10px;
-  padding: 14px 18px;
-  font-size: 0.9rem;
-  text-align: center;
-}
-
-/* ---------- Success share ---------- */
-.founding-success .btn.success-share {
-  margin-top: 24px;
-  background: var(--color-primary);
-  color: var(--color-white);
-  box-shadow: 0 4px 14px rgba(22, 61, 40, 0.3);
-  white-space: normal;
-}
-
-.founding-success .btn.success-share:hover {
-  background: var(--color-primary-light);
-}
-
-.founding-success-note {
-  color: var(--color-muted);
-  font-size: 0.85rem;
-  margin-top: 16px;
 }
 
 /* ---------- Sticky mobile CTA bar ---------- */
@@ -1346,7 +1258,7 @@ body.menu-locked { overflow: hidden; }
   text-decoration: underline;
 }
 
-/* ---------- Keyboard focus, anchor offset, spam trap ---------- */
+/* ---------- Keyboard focus, anchor offset ---------- */
 a:focus-visible,
 button:focus-visible,
 summary:focus-visible {
@@ -1355,14 +1267,6 @@ summary:focus-visible {
 }
 
 section[id], .callout[id] { scroll-margin-top: 84px; }
-
-.form-trap {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
 
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {

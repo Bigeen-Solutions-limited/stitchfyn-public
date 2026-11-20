@@ -34,8 +34,7 @@ Every public claim must match what the app does today (see `DECISIONS.md`, DEC-0
 
 | Setting | Value | What it does |
 |---|---|---|
-| `FORMSPREE_ENDPOINT` | `https://formspree.io/f/movwonva` | Where the Early Adopter form posts |
-| `APP_URL` | `https://app.stitchfyn.com` | Turns on the Sign in links and the seal check on `verify.html`, which opens `APP_URL/public/seals/<code>`. After changing it, run `node scripts/sync-partials.mjs` so the pages' Sign in links match |
+| `APP_URL` | `https://app.stitchfyn.com` | Turns on the Sign in and Apply links (`/login`, `/signup`) and the seal check on `verify.html`, which opens `APP_URL/public/seals/<code>`. After changing it, run `node scripts/sync-partials.mjs` so the pages' Sign in links match |
 | `CF_ANALYTICS_TOKEN` | empty | Cloudflare Web Analytics (DEC-012). Empty means no analytics script loads |
 
 ### Turning on Cloudflare Web Analytics
