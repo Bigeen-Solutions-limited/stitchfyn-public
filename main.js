@@ -26,12 +26,12 @@ const CF_ANALYTICS_TOKEN = '';
 (function () {
   if (document.body.getAttribute('data-page') !== 'home') return;
   const moved = {
-    '#how': 'how-it-works.html',
-    '#platform': 'features.html',
-    '#proof': 'features.html#proof',
-    '#verify': 'verify.html',
-    '#faq': 'faq.html',
-    '#founding': 'early-adopters.html#founding'
+    '#how': '/how-it-works',
+    '#platform': '/features',
+    '#proof': '/features#proof',
+    '#verify': '/verify',
+    '#faq': '/faq',
+    '#founding': '/early-adopters#founding'
   };
   const target = moved[location.hash];
   if (target) location.replace(target);
