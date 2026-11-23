@@ -31,12 +31,12 @@ const check = process.argv.includes("--check");
 //   solidNav: true where the page has no green hero under the nav
 const PAGES = {
   "index.html": { current: null },
-  "how-it-works.html": { current: "how-it-works.html" },
-  "features.html": { current: "features.html" },
-  "verify.html": { current: "verify.html" },
-  "faq.html": { current: "faq.html" },
-  "guide.html": { current: "guide.html" },
-  "early-adopters.html": { current: "early-adopters.html", applyBar: false },
+  "how-it-works.html": { current: "/how-it-works" },
+  "features.html": { current: "/features" },
+  "verify.html": { current: "/verify" },
+  "faq.html": { current: "/faq" },
+  "guide.html": { current: "/guide" },
+  "early-adopters.html": { current: "/early-adopters", applyBar: false },
   "privacy.html": { current: null, solidNav: true },
 };
 

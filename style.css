@@ -1227,6 +1227,15 @@ body.menu-locked { overflow: hidden; }
 
 .faq summary::-webkit-details-marker { display: none; }
 
+/* The question is a heading for search engines and screen readers; it keeps the summary's look */
+.faq-q {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+}
+
 .faq summary::after {
   content: "+";
   position: absolute;
