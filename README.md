@@ -68,3 +68,4 @@ Running it twice changes nothing. To add a page, add it to `PAGES` at the top of
 ## Old links
 
 The site used to be one long page. `main.js` sends old section links on the home page (`/#how`, `/#platform`, `/#proof`, `/#faq`, `/#founding`, `/#verify`) to the new pages. `/#pattern` stays on the home page. The server never sees the part after `#`, so this has to happen in the browser. `_redirects` (Cloudflare Pages) covers old path-style aliases such as `/apply`..
+.
